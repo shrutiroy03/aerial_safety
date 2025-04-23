@@ -1,0 +1,57 @@
+Started to play
+[BasePlayer] Creating vecenv:  navigation_task
+[isaacgym:gymutil.py] Unknown args:  ['--file=./ppo_aerial_quad_navigation.yaml', '--play', '--checkpoint=./runs/gen_ppo_26-16-11-42/nn/last_gen_ppo_ep_500_rew__377.14606_.pth', '--track', 'wandb-project-name=Trained_RL_Navigation', 'wandb-entity=shrutiroy03']
+[37m[7960 ms][base_task] - INFO : Setting seed: 1696985779 (base_task.py:38)
+[37m[7964 ms][navigation_task] - INFO : Building environment for navigation task. (navigation_task.py:44)
+[37m[7964 ms][navigation_task] - INFO : Sim Name: base_sim, Env Name: env_with_obstacles, Robot Name: lmf2, Controller Name: lmf2_velocity_control (navigation_task.py:45)
+[37m[7964 ms][env_manager] - INFO : Populating environments. (env_manager.py:73)
+[37m[7964 ms][env_manager] - INFO : Creating simulation instance. (env_manager.py:87)
+[37m[7964 ms][env_manager] - INFO : Instantiating IGE object. (env_manager.py:88)
+[37m[7964 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Environment (IGE_env_manager.py:41)
+[37m[7964 ms][IsaacGymEnvManager] - INFO : Acquiring gym object (IGE_env_manager.py:73)
+[37m[7964 ms][IsaacGymEnvManager] - INFO : Acquired gym object (IGE_env_manager.py:75)
+[37m[7965 ms][IsaacGymEnvManager] - INFO : Fixing devices (IGE_env_manager.py:89)
+[37m[7965 ms][IsaacGymEnvManager] - INFO : Using GPU pipeline for simulation. (IGE_env_manager.py:102)
+[37m[7965 ms][IsaacGymEnvManager] - INFO : Sim Device type: cuda, Sim Device ID: 0 (IGE_env_manager.py:105)
+[37m[7965 ms][IsaacGymEnvManager] - INFO : Graphics Device ID: 0 (IGE_env_manager.py:119)
+[37m[7965 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Simulation Object (IGE_env_manager.py:120)
+[33m[7965 ms][IsaacGymEnvManager] - WARNING : If you have set the CUDA_VISIBLE_DEVICES environment variable, please ensure that you set it
+[33mto a particular one that works for your system to use the viewer or Isaac Gym cameras.
+[33mIf you want to run parallel simulations on multiple GPUs with camera sensors,
+[33mplease disable Isaac Gym and use warp (by setting use_warp=True), set the viewer to headless. (IGE_env_manager.py:127)
+[33m[7965 ms][IsaacGymEnvManager] - WARNING : If you see a segfault in the next lines, it is because of the discrepancy between the CUDA device and the graphics device.
+[33mPlease ensure that the CUDA device and the graphics device are the same. (IGE_env_manager.py:132)
+[37m[9021 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Simulation Object (IGE_env_manager.py:136)
+[37m[9022 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Environment (IGE_env_manager.py:43)
+[37m[9214 ms][env_manager] - INFO : IGE object instantiated. (env_manager.py:109)
+[37m[9214 ms][env_manager] - INFO : Creating warp environment. (env_manager.py:112)
+[37m[9214 ms][env_manager] - INFO : Warp environment created. (env_manager.py:114)
+[37m[9214 ms][env_manager] - INFO : Creating robot manager. (env_manager.py:118)
+[37m[9214 ms][BaseRobot] - INFO : [DONE] Initializing controller (base_robot.py:26)
+[37m[9214 ms][BaseRobot] - INFO : Initializing controller lmf2_velocity_control (base_robot.py:29)
+[33m[9214 ms][base_multirotor] - WARNING : Creating 16 multirotors. (base_multirotor.py:32)
+[37m[9214 ms][env_manager] - INFO : [DONE] Creating robot manager. (env_manager.py:123)
+[37m[9214 ms][env_manager] - INFO : [DONE] Creating simulation instance. (env_manager.py:125)
+[37m[9215 ms][asset_loader] - INFO : Loading asset: model.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9216 ms][asset_loader] - INFO : Loading asset: panel.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9220 ms][asset_loader] - INFO : Loading asset: 0_5_x_0_5_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9222 ms][asset_loader] - INFO : Loading asset: small_cube.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9223 ms][asset_loader] - INFO : Loading asset: cuboidal_rod.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9224 ms][asset_loader] - INFO : Loading asset: left_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9225 ms][asset_loader] - INFO : Loading asset: right_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9226 ms][asset_loader] - INFO : Loading asset: back_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9228 ms][asset_loader] - INFO : Loading asset: front_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9229 ms][asset_loader] - INFO : Loading asset: bottom_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9230 ms][asset_loader] - INFO : Loading asset: top_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9231 ms][asset_loader] - INFO : Loading asset: 1_x_1_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[9234 ms][env_manager] - INFO : Populating environment 0 (env_manager.py:179)
+[33m[9427 ms][robot_manager] - WARNING : 
+[33mRobot mass: 1.2400000467896461,
+[33mInertia: tensor([[0.0134, 0.0000, 0.0000],
+[33m        [0.0000, 0.0144, 0.0000],
+[33m        [0.0000, 0.0000, 0.0138]], device='cuda:0'),
+[33mRobot COM: tensor([[0., 0., 0., 1.]], device='cuda:0') (robot_manager.py:427)
+[33m[9427 ms][robot_manager] - WARNING : Calculated robot mass and inertia for this robot. This code assumes that your robot is the same across environments. (robot_manager.py:430)
+[31m[9427 ms][robot_manager] - CRITICAL : If your robot differs across environments you need to perform this computation for each different robot here. (robot_manager.py:433)
+[37m[9456 ms][env_manager] - INFO : [DONE] Populating environments. (env_manager.py:75)
+[33m[9468 ms][IsaacGymEnvManager] - WARNING : Headless: False (IGE_env_manager.py:424)

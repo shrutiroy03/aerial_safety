@@ -1,0 +1,34 @@
+2025-04-12 01:00:06 ERROR 400 response executing GraphQL.
+2025-04-12 01:00:06 ERROR {"errors":[{"message":"entityName required for models query","path":["models"]}],"data":{"models":null}}
+2025-04-12 01:00:06 ERROR Traceback (most recent call last):
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 501, in list_projects
+    self.gql(
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 108, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 158, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 97, in wrapper
+    return func(*args, **kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 192, in projects
+    projects = api.list_projects(entity=entity)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/internal.py", line 64, in list_projects
+    return self.api.list_projects(entity=entity)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 27, in wrapper
+    raise CommError(err.response, err)
+wandb.errors.CommError: <Response [400]>
+

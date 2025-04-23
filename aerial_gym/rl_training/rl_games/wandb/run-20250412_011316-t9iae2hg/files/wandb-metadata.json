@@ -1,0 +1,32 @@
+{
+    "os": "Linux-6.8.0-57-generic-x86_64-with-glibc2.17",
+    "python": "3.8.20",
+    "heartbeatAt": "2025-04-12T05:13:17.274055",
+    "startedAt": "2025-04-12T05:13:16.534767",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [
+        "--file=./sac_aerial_quad_navigation.yaml",
+        "--num_envs=128",
+        "--headless=True",
+        "--train",
+        "--track",
+        "--wandb-project-name=safe-rl",
+        "--wandb-entity=shrutiroy03-princeton-university"
+    ],
+    "state": "running",
+    "program": "runner.py",
+    "codePath": "aerial_gym/rl_training/rl_games/runner.py",
+    "git": {
+        "remote": "https://github.com/ntnu-arl/aerial_gym_simulator.git",
+        "commit": "f7f6d28fa37d64fd4956a7b5c7ad1685669aa40e"
+    },
+    "email": "sr0005@princeton.edu",
+    "root": "/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator",
+    "host": "saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM",
+    "username": "shruti",
+    "executable": "/home/shruti/miniconda3/envs/safe-rl/bin/python3"
+}

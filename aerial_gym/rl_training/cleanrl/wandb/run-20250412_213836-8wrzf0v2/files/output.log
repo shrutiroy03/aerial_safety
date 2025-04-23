@@ -1,0 +1,19 @@
+
+using device: cuda:0
+[37m[4616 ms][base_task] - INFO : Setting seed: 3260279725 (base_task.py:38)
+[37m[4617 ms][reach_avoid_task] - INFO : Building environment for reach-avoid task. (reach_avoid_task.py:44)
+[37m[4617 ms][reach_avoid_task] - INFO : Sim Name: base_sim, Env Name: env_with_obstacles, Robot Name: lmf2, Controller Name: lmf2_velocity_control (reach_avoid_task.py:45)
+[37m[4617 ms][env_manager] - INFO : Populating environments. (env_manager.py:73)
+[37m[4617 ms][env_manager] - INFO : Creating simulation instance. (env_manager.py:87)
+[37m[4617 ms][env_manager] - INFO : Instantiating IGE object. (env_manager.py:88)
+[37m[4617 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Environment (IGE_env_manager.py:41)
+[37m[4617 ms][IsaacGymEnvManager] - INFO : Acquiring gym object (IGE_env_manager.py:73)
+[37m[4617 ms][IsaacGymEnvManager] - INFO : Acquired gym object (IGE_env_manager.py:75)
+usage: sac_continuous_action.py [-h] [--sim_device SIM_DEVICE]
+                                [--pipeline PIPELINE]
+                                [--graphics_device_id GRAPHICS_DEVICE_ID]
+                                [--flex | --physx] [--num_threads NUM_THREADS]
+                                [--subscenes SUBSCENES] [--slices SLICES]
+                                [--headless HEADLESS] [--num_envs NUM_ENVS]
+                                [--use_warp USE_WARP]
+sac_continuous_action.py: error: argument --headless: expected one argument

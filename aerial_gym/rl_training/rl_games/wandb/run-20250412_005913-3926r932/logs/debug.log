@@ -1,0 +1,36 @@
+2025-04-12 00:59:13,531 INFO    MainThread:14290 [wandb_setup.py:_flush():76] Configure stats pid to 14290
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_setup.py:_flush():76] Loading settings from /home/shruti/.config/wandb/settings
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_setup.py:_flush():76] Loading settings from /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/settings
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'aerial_gym/rl_training/rl_games/runner.py', 'program': 'runner.py'}
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_init.py:_log_setup():461] Logging user logs to /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250412_005913-3926r932/logs/debug.log
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_init.py:_log_setup():462] Logging internal logs to /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250412_005913-3926r932/logs/debug-internal.log
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_init.py:init():495] calling init triggers
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'params': {'seed': 10, 'algo': {'name': 'a2c_continuous'}, 'model': {'name': 'continuous_a2c_logstd'}, 'load_checkpoint': False, 'network': {'name': 'actor_critic', 'separate': False, 'space': {'continuous': {'mu_activation': 'None', 'sigma_activation': 'None', 'mu_init': {'name': 'default'}, 'sigma_init': {'name': 'const_initializer', 'val': 0}, 'fixed_sigma': True}}, 'mlp': {'units': [256, 128, 64], 'd2rl': False, 'activation': 'elu', 'initializer': {'name': 'default', 'scale': 2}}}, 'config': {'env_name': 'navigation_task', 'env_config': {'num_envs': 512, 'headless': True, 'use_warp': True}, 'name': 'gen_ppo', 'reward_shaper': {'scale_value': 0.1}, 'normalize_advantage': True, 'gamma': 0.98, 'tau': 0.95, 'ppo': True, 'learning_rate': '1e-4', 'lr_schedule': 'adaptive', 'kl_threshold': 0.016, 'save_best_after': 10, 'score_to_win': 100000, 'grad_norm': 1.0, 'entropy_coef': 0, 'truncate_grads': True, 'e_clip': 0.2, 'clip_value': False, 'num_actors': 512, 'horizon_length': 32, 'minibatch_size': 2048, 'mini_epochs': 4, 'critic_coef': 2, 'normalize_input': True, 'bounds_loss_coef': 0.0001, 'max_epochs': 500, 'normalize_value': True, 'use_diagnostics': True, 'value_bootstrap': True, 'use_smooth_clamp': False, 'player': {'use_vecenv': True}}}}
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [wandb_init.py:init():548] starting backend
+2025-04-12 00:59:13,532 INFO    MainThread:14290 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-12 00:59:13,542 INFO    MainThread:14290 [backend.py:ensure_launched():217] starting backend process...
+2025-04-12 00:59:13,548 INFO    MainThread:14290 [backend.py:ensure_launched():222] started backend process with pid: 14349
+2025-04-12 00:59:13,549 INFO    MainThread:14290 [wandb_init.py:init():558] backend started and connected
+2025-04-12 00:59:13,554 INFO    MainThread:14290 [wandb_init.py:init():634] updated telemetry
+2025-04-12 00:59:13,570 INFO    MainThread:14290 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2025-04-12 00:59:19,151 WARNING MainThread:14290 [wandb_init.py:init():1064] interrupted
+Traceback (most recent call last):
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1043, in init
+    run = wi.init()
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 668, in init
+    run_result = backend.interface.communicate_run(
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 223, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/interface/interface_shared.py", line 324, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/interface/interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/interface/router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

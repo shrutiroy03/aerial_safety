@@ -1,0 +1,95 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.21
+    code_path: code/aerial_gym/rl_training/rl_games/runner.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.20
+    start_time: 1744434589
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 16
+      - 35
+      4: 3.8.20
+      5: 0.12.21
+      8:
+      - 5
+params:
+  desc: null
+  value:
+    algo:
+      name: a2c_continuous
+    config:
+      bounds_loss_coef: 0.0001
+      clip_value: false
+      critic_coef: 2
+      e_clip: 0.2
+      entropy_coef: 0
+      env_config:
+        headless: true
+        num_envs: 512
+        use_warp: true
+      env_name: navigation_task
+      gamma: 0.98
+      grad_norm: 1.0
+      horizon_length: 32
+      kl_threshold: 0.016
+      learning_rate: 1e-4
+      lr_schedule: adaptive
+      max_epochs: 500
+      mini_epochs: 4
+      minibatch_size: 2048
+      name: gen_ppo
+      normalize_advantage: true
+      normalize_input: true
+      normalize_value: true
+      num_actors: 512
+      player:
+        use_vecenv: true
+      ppo: true
+      reward_shaper:
+        scale_value: 0.1
+      save_best_after: 10
+      score_to_win: 100000
+      tau: 0.95
+      truncate_grads: true
+      use_diagnostics: true
+      use_smooth_clamp: false
+      value_bootstrap: true
+    load_checkpoint: false
+    model:
+      name: continuous_a2c_logstd
+    network:
+      mlp:
+        activation: elu
+        d2rl: false
+        initializer:
+          name: default
+          scale: 2
+        units:
+        - 256
+        - 128
+        - 64
+      name: actor_critic
+      separate: false
+      space:
+        continuous:
+          fixed_sigma: true
+          mu_activation: None
+          mu_init:
+            name: default
+          sigma_activation: None
+          sigma_init:
+            name: const_initializer
+            val: 0
+    seed: 10

@@ -1,0 +1,65 @@
+2025-02-26 21:49:56,173 INFO    StreamThr :18912 [internal.py:wandb_internal():86] W&B internal server running at pid: 18912, started at: 2025-02-26 21:49:56.173488
+2025-02-26 21:49:56,175 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: status
+2025-02-26 21:49:56,176 INFO    WriterThread:18912 [datastore.py:open_for_write():87] open: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/run-6wkwdl9e.wandb
+2025-02-26 21:49:56,176 DEBUG   SenderThread:18912 [sender.py:send():379] send: header
+2025-02-26 21:49:56,188 DEBUG   SenderThread:18912 [sender.py:send():379] send: run
+2025-02-26 21:49:56,473 INFO    SenderThread:18912 [dir_watcher.py:__init__():211] watching files in: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files
+2025-02-26 21:49:56,473 INFO    SenderThread:18912 [sender.py:_start_run_threads():1124] run started: 6wkwdl9e with start time 1740624596.17316
+2025-02-26 21:49:56,485 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: check_version
+2025-02-26 21:49:56,486 DEBUG   SenderThread:18912 [sender.py:send_request():406] send_request: check_version
+2025-02-26 21:49:56,539 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: run_start
+2025-02-26 21:49:56,549 DEBUG   HandlerThread:18912 [system_info.py:__init__():26] System info init
+2025-02-26 21:49:56,549 DEBUG   HandlerThread:18912 [system_info.py:__init__():41] System info init done
+2025-02-26 21:49:56,549 INFO    HandlerThread:18912 [system_monitor.py:start():194] Starting system monitor
+2025-02-26 21:49:56,549 INFO    SystemMonitor:18912 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-02-26 21:49:56,549 INFO    HandlerThread:18912 [system_monitor.py:probe():214] Collecting system info
+2025-02-26 21:49:56,550 INFO    SystemMonitor:18912 [interfaces.py:start():190] Started cpu monitoring
+2025-02-26 21:49:56,550 INFO    SystemMonitor:18912 [interfaces.py:start():190] Started disk monitoring
+2025-02-26 21:49:56,551 INFO    SystemMonitor:18912 [interfaces.py:start():190] Started gpu monitoring
+2025-02-26 21:49:56,552 INFO    SystemMonitor:18912 [interfaces.py:start():190] Started memory monitoring
+2025-02-26 21:49:56,553 INFO    SystemMonitor:18912 [interfaces.py:start():190] Started network monitoring
+2025-02-26 21:49:56,568 DEBUG   HandlerThread:18912 [system_info.py:probe():150] Probing system
+2025-02-26 21:49:56,572 DEBUG   HandlerThread:18912 [system_info.py:_probe_git():135] Probing git
+2025-02-26 21:49:56,578 DEBUG   HandlerThread:18912 [system_info.py:_probe_git():143] Probing git done
+2025-02-26 21:49:56,579 DEBUG   HandlerThread:18912 [system_info.py:probe():198] Probing system done
+2025-02-26 21:49:56,579 DEBUG   HandlerThread:18912 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-44-generic-x86_64-with-glibc2.17', 'python': '3.8.20', 'heartbeatAt': '2025-02-27T02:49:56.568798', 'startedAt': '2025-02-27T02:49:56.169625', 'docker': None, 'cuda': None, 'args': ('--file=./ppo_aerial_quad_navigation.yaml', '--num_envs=16', '--play', '--checkpoint=./runs/gen_ppo_26-16-11-42/nn/last_gen_ppo_ep_500_rew__377.14606_.pth', '--track', 'wandb-project-name=Trained_RL_Navigation', 'wandb-entity=shrutiroy03'), 'state': 'running', 'program': 'runner.py', 'codePathLocal': 'runner.py', 'codePath': 'aerial_gym/rl_training/rl_games/runner.py', 'git': {'remote': 'https://github.com/ntnu-arl/aerial_gym_simulator.git', 'commit': '85114e7514ed0f3f8cfecfa23c40dad106c528a1'}, 'email': None, 'root': '/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator', 'host': 'saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM', 'username': 'shruti', 'executable': '/home/shruti/miniconda3/envs/aerialgym/bin/python3', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 1308.48225, 'min': 400.0, 'max': 4180.0}, 'cpu_freq_per_core': [{'current': 2979.742, 'min': 400.0, 'max': 4600.0}, {'current': 3497.18, 'min': 400.0, 'max': 4600.0}, {'current': 563.73, 'min': 400.0, 'max': 4600.0}, {'current': 3292.43, 'min': 400.0, 'max': 4600.0}, {'current': 3539.977, 'min': 400.0, 'max': 4700.0}, {'current': 400.0, 'min': 400.0, 'max': 4700.0}, {'current': 2456.685, 'min': 400.0, 'max': 4700.0}, {'current': 2533.265, 'min': 400.0, 'max': 4700.0}, {'current': 613.557, 'min': 400.0, 'max': 4600.0}, {'current': 400.0, 'min': 400.0, 'max': 4600.0}, {'current': 3503.302, 'min': 400.0, 'max': 4600.0}, {'current': 400.0, 'min': 400.0, 'max': 4600.0}, {'current': 2393.041, 'min': 400.0, 'max': 3500.0}, {'current': 1714.927, 'min': 400.0, 'max': 3500.0}, {'current': 400.0, 'min': 400.0, 'max': 3500.0}, {'current': 400.0, 'min': 400.0, 'max': 3500.0}, {'current': 400.0, 'min': 400.0, 'max': 3500.0}, {'current': 972.316, 'min': 400.0, 'max': 3500.0}, {'current': 400.0, 'min': 400.0, 'max': 3500.0}, {'current': 400.0, 'min': 400.0, 'max': 3500.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 231.4603500366211}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 15.238014221191406}}
+2025-02-26 21:49:56,579 INFO    HandlerThread:18912 [system_monitor.py:probe():224] Finished collecting system info
+2025-02-26 21:49:56,579 INFO    HandlerThread:18912 [system_monitor.py:probe():227] Publishing system info
+2025-02-26 21:49:56,579 DEBUG   HandlerThread:18912 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2025-02-26 21:49:57,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/conda-environment.yaml
+2025-02-26 21:49:58,200 DEBUG   HandlerThread:18912 [system_info.py:_save_conda():222] Saving conda packages done
+2025-02-26 21:49:58,200 DEBUG   HandlerThread:18912 [system_info.py:_save_code():44] Saving code
+2025-02-26 21:49:58,204 DEBUG   HandlerThread:18912 [system_info.py:_save_code():65] Saving code done
+2025-02-26 21:49:58,204 DEBUG   HandlerThread:18912 [system_info.py:_save_patches():82] Saving git patches
+2025-02-26 21:49:58,225 DEBUG   HandlerThread:18912 [system_info.py:_save_patches():124] Saving git patches done
+2025-02-26 21:49:58,226 INFO    HandlerThread:18912 [system_monitor.py:probe():229] Finished publishing system info
+2025-02-26 21:49:58,228 DEBUG   SenderThread:18912 [sender.py:send():379] send: files
+2025-02-26 21:49:58,228 INFO    SenderThread:18912 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2025-02-26 21:49:58,229 INFO    SenderThread:18912 [sender.py:_save_file():1390] saving file code/aerial_gym/rl_training/rl_games/runner.py with policy now
+2025-02-26 21:49:58,229 INFO    SenderThread:18912 [sender.py:_save_file():1390] saving file diff.patch with policy now
+2025-02-26 21:49:58,309 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: python_packages
+2025-02-26 21:49:58,309 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: stop_status
+2025-02-26 21:49:58,310 DEBUG   SenderThread:18912 [sender.py:send_request():406] send_request: python_packages
+2025-02-26 21:49:58,310 DEBUG   HandlerThread:18912 [handler.py:handle_request():146] handle_request: internal_messages
+2025-02-26 21:49:58,310 DEBUG   SenderThread:18912 [sender.py:send_request():406] send_request: stop_status
+2025-02-26 21:49:58,405 DEBUG   SenderThread:18912 [sender.py:send():379] send: telemetry
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/conda-environment.yaml
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/output.log
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/wandb-metadata.json
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/code/aerial_gym/rl_training/rl_games/runner.py
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/diff.patch
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/requirements.txt
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/code/aerial_gym
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/code/aerial_gym/rl_training
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/code
+2025-02-26 21:49:58,474 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/code/aerial_gym/rl_training/rl_games
+2025-02-26 21:49:58,480 INFO    wandb-upload_0:18912 [upload_job.py:push():131] Uploaded file /tmp/tmp3212va81wandb/4od9ks2c-wandb-metadata.json
+2025-02-26 21:49:58,516 INFO    wandb-upload_1:18912 [upload_job.py:push():131] Uploaded file /tmp/tmp3212va81wandb/fvi53ci6-code/aerial_gym/rl_training/rl_games/runner.py
+2025-02-26 21:49:58,717 INFO    wandb-upload_2:18912 [upload_job.py:push():131] Uploaded file /tmp/tmp3212va81wandb/hydyx11x-diff.patch
+2025-02-26 21:50:00,476 INFO    Thread-12 :18912 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/rl_training/rl_games/wandb/run-20250226_214956-6wkwdl9e/files/output.log
+2025-02-26 21:50:00,553 INFO    cpu       :18912 [interfaces.py:monitor():140] Process cpu has exited.
+2025-02-26 21:50:00,557 DEBUG   SystemMonitor:18912 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-02-26 21:50:00,558 DEBUG   SystemMonitor:18912 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-26 21:50:00,558 DEBUG   SystemMonitor:18912 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-26 21:50:00,561 DEBUG   SenderThread:18912 [sender.py:send():379] send: stats
+2025-02-26 21:50:01,542 INFO    MainThread:18912 [internal.py:handle_exit():76] Internal process exited

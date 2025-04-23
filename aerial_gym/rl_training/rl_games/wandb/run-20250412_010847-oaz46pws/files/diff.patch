@@ -1,0 +1,115 @@
+diff --git a/aerial_gym/config/robot_config/base_quad_config.py b/aerial_gym/config/robot_config/base_quad_config.py
+index d9de4e1..5af9b0a 100644
+--- a/aerial_gym/config/robot_config/base_quad_config.py
++++ b/aerial_gym/config/robot_config/base_quad_config.py
+@@ -59,7 +59,7 @@ class BaseQuadCfg:
+         ]
+ 
+     class sensor_config:
+-        enable_camera = False
++        enable_camera = True
+         camera_config = BaseDepthCameraConfig  # BaseNormalFaceIDCameraConfig
+ 
+         enable_lidar = False
+diff --git a/aerial_gym/rl_training/rl_games/runner.py b/aerial_gym/rl_training/rl_games/runner.py
+index bd45a3c..a65ec66 100644
+--- a/aerial_gym/rl_training/rl_games/runner.py
++++ b/aerial_gym/rl_training/rl_games/runner.py
+@@ -21,6 +21,8 @@ import distutils
+ os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
+ # import warnings
+ # warnings.filterwarnings("error")
++torch.cuda.empty_cache()
++
+ 
+ 
+ class ExtractObsWrapper(gym.Wrapper):
+@@ -319,7 +321,7 @@ if __name__ == "__main__":
+ 
+         wandb.init(
+             project=args["wandb_project_name"],
+-            entity=args["wandb_entity"],
++            entity='shrutiroy03-princeton-university',
+             sync_tensorboard=True,
+             config=config,
+             monitor_gym=True,
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log b/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
+index e69de29..95c54fb 100644
+--- a/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
+@@ -0,0 +1,34 @@
++2025-04-12 01:00:06 ERROR 400 response executing GraphQL.
++2025-04-12 01:00:06 ERROR {"errors":[{"message":"entityName required for models query","path":["models"]}],"data":{"models":null}}
++2025-04-12 01:00:06 ERROR Traceback (most recent call last):
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
++    return func(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 501, in list_projects
++    self.gql(
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 108, in __call__
++    result = self._call_fn(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 158, in execute
++    return self.client.execute(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
++    result = self._get_result(document, *args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
++    return self.transport.execute(document, *args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
++    request.raise_for_status()
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
++    raise HTTPError(http_error_msg, response=self)
++requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
++
++During handling of the above exception, another exception occurred:
++
++Traceback (most recent call last):
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 97, in wrapper
++    return func(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 192, in projects
++    projects = api.list_projects(entity=entity)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/internal.py", line 64, in list_projects
++    return self.api.list_projects(entity=entity)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 27, in wrapper
++    raise CommError(err.response, err)
++wandb.errors.CommError: <Response [400]>
++
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug-internal.log b/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
+index ca14bbf..45ab112 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f/logs/debug-internal.log
+\ No newline at end of file
++run-20250412_010847-oaz46pws/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug.log b/aerial_gym/rl_training/rl_games/wandb/debug.log
+index da86130..a0c9066 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/debug.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug.log
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f/logs/debug.log
+\ No newline at end of file
++run-20250412_010847-oaz46pws/logs/debug.log
+\ No newline at end of file
+diff --git a/aerial_gym/rl_training/rl_games/wandb/latest-run b/aerial_gym/rl_training/rl_games/wandb/latest-run
+index f2c5dad..8b9d110 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/latest-run
++++ b/aerial_gym/rl_training/rl_games/wandb/latest-run
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f
+\ No newline at end of file
++run-20250412_010847-oaz46pws
+\ No newline at end of file
+diff --git a/aerial_gym/task/__init__.py b/aerial_gym/task/__init__.py
+index 00b3d38..e62f687 100644
+--- a/aerial_gym/task/__init__.py
++++ b/aerial_gym/task/__init__.py
+@@ -98,5 +98,5 @@ task_registry.register_task(
+ #from aerial_gym.task.custom_task.custom_task import CustomTask
+ #task_registry.register_task("custom_task", CustomTask, custom_task.task_config)
+ 
+-from aerial_gym.task.reach_avoid_task.reach_avoid_task import ReachAvoidTask
+-task_registry.register_task("reach_avoid_task", ReachAvoidTask, reach_avoid_task.task_config)
+\ No newline at end of file
++# from aerial_gym.task.reach_avoid_task.reach_avoid_task import ReachAvoidTask
++# task_registry.register_task("reach_avoid_task", ReachAvoidTask, reach_avoid_task.task_config)
+\ No newline at end of file

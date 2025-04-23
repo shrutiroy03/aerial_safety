@@ -1,0 +1,42 @@
+Started to train
+{'env_name': 'navigation_task', 'env_config': {'num_envs': 128, 'headless': True, 'use_warp': True, 'seed': 10}, 'name': 'gen_sac', 'reward_shaper': <rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x79e59e2b8640>, 'normalize_advantage': True, 'gamma': 0.98, 'tau': 0.95, 'ppo': True, 'learning_rate': '1e-4', 'lr_schedule': 'adaptive', 'kl_threshold': 0.016, 'save_best_after': 10, 'score_to_win': 100000, 'grad_norm': 1.0, 'entropy_coef': 0, 'truncate_grads': True, 'e_clip': 0.2, 'clip_value': False, 'num_actors': 128, 'horizon_length': 32, 'minibatch_size': 2048, 'mini_epochs': 4, 'critic_coef': 2, 'normalize_input': True, 'bounds_loss_coef': 0.0001, 'max_epochs': 500, 'normalize_value': True, 'use_diagnostics': True, 'value_bootstrap': True, 'use_smooth_clamp': False, 'player': {'use_vecenv': True}, 'features': {'observer': <rl_games.common.algo_observer.DefaultAlgoObserver object at 0x79e55fb34310>}}
+Traceback (most recent call last):
+  File "runner.py", line 328, in <module>
+    runner.run(args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 133, in run
+    self.run_train(args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 113, in run_train
+    agent = self.algo_factory.create(self.algo_name, base_name='run', params=self.params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/common/object_factory.py", line 15, in create
+    return builder(**kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 39, in <lambda>
+    self.algo_factory.register_builder('sac', lambda **kwargs: sac_agent.SACAgent(**kwargs))
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/sac_agent.py", line 29, in __init__
+    self.load_networks(params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/sac_agent.py", line 95, in load_networks
+    self.config['network'] = builder.load(params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/model_builder.py", line 57, in load
+    model = self.model_factory.create(model_name, network=network)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/common/object_factory.py", line 14, in create
+    raise ValueError(name)
+ValueError: sac
+Traceback (most recent call last):
+  File "runner.py", line 328, in <module>
+    runner.run(args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 133, in run
+    self.run_train(args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 113, in run_train
+    agent = self.algo_factory.create(self.algo_name, base_name='run', params=self.params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/common/object_factory.py", line 15, in create
+    return builder(**kwargs)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/torch_runner.py", line 39, in <lambda>
+    self.algo_factory.register_builder('sac', lambda **kwargs: sac_agent.SACAgent(**kwargs))
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/sac_agent.py", line 29, in __init__
+    self.load_networks(params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/sac_agent.py", line 95, in load_networks
+    self.config['network'] = builder.load(params)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/algos_torch/model_builder.py", line 57, in load
+    model = self.model_factory.create(model_name, network=network)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/rl_games/common/object_factory.py", line 14, in create
+    raise ValueError(name)
+ValueError: sac

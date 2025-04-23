@@ -1,0 +1,343 @@
+diff --git a/aerial_gym/config/robot_config/base_quad_config.py b/aerial_gym/config/robot_config/base_quad_config.py
+index d9de4e1..5af9b0a 100644
+--- a/aerial_gym/config/robot_config/base_quad_config.py
++++ b/aerial_gym/config/robot_config/base_quad_config.py
+@@ -59,7 +59,7 @@ class BaseQuadCfg:
+         ]
+ 
+     class sensor_config:
+-        enable_camera = False
++        enable_camera = True
+         camera_config = BaseDepthCameraConfig  # BaseNormalFaceIDCameraConfig
+ 
+         enable_lidar = False
+diff --git a/aerial_gym/config/task_config/reach_avoid_task_config.py b/aerial_gym/config/task_config/reach_avoid_task_config.py
+index 7ecbda5..d7feda7 100644
+--- a/aerial_gym/config/task_config/reach_avoid_task_config.py
++++ b/aerial_gym/config/task_config/reach_avoid_task_config.py
+@@ -23,27 +23,16 @@ class task_config:
+     )
+     # user can set the above to true if they so desire
+ 
+-    target_min_ratio = [0.90, 0.1, 0.1]  # target ratio w.r.t environment bounds in x,y,z
+-    target_max_ratio = [0.94, 0.90, 0.90]  # target ratio w.r.t environment bounds in x,y,z
++    # target_min_ratio = [0.90, 0.1, 0.1]  # target ratio w.r.t environment bounds in x,y,z
++    # target_max_ratio = [0.94, 0.90, 0.90]  # target ratio w.r.t environment bounds in x,y,z
+ 
+     reward_parameters = {
+-        "pos_reward_magnitude": 5.0,
+-        "pos_reward_exponent": 1.0 / 3.5,
+-        "very_close_to_goal_reward_magnitude": 5.0,
+-        "very_close_to_goal_reward_exponent": 2.0,
+-        "getting_closer_reward_multiplier": 10.0,
+-        "x_action_diff_penalty_magnitude": 0.8,
+-        "x_action_diff_penalty_exponent": 3.333,
+-        "z_action_diff_penalty_magnitude": 0.8,
+-        "z_action_diff_penalty_exponent": 5.0,
+-        "yawrate_action_diff_penalty_magnitude": 0.8,
+-        "yawrate_action_diff_penalty_exponent": 3.33,
+-        "x_absolute_action_penalty_magnitude": 0.1,
+-        "x_absolute_action_penalty_exponent": 0.3,
+-        "z_absolute_action_penalty_magnitude": 1.5,
+-        "z_absolute_action_penalty_exponent": 1.0,
+-        "yawrate_absolute_action_penalty_magnitude": 1.5,
+-        "yawrate_absolute_action_penalty_exponent": 2.0,
++        "velocity_max": 0.2,
++        "angvel_max": 0.2,
++        "obs_dist_lmin": 0.1,
++        "obs_dist_gmin": 0.05,
++        "wall_dist_lmin": 0.1,
++        "wall_dist_gmin": 0.05,
+         "collision_penalty": -100.0,
+     }
+ 
+diff --git a/aerial_gym/rl_training/rl_games/runner.py b/aerial_gym/rl_training/rl_games/runner.py
+index bd45a3c..855a3e5 100644
+--- a/aerial_gym/rl_training/rl_games/runner.py
++++ b/aerial_gym/rl_training/rl_games/runner.py
+@@ -319,7 +319,7 @@ if __name__ == "__main__":
+ 
+         wandb.init(
+             project=args["wandb_project_name"],
+-            entity=args["wandb_entity"],
++            entity='shrutiroy03-princeton-university',
+             sync_tensorboard=True,
+             config=config,
+             monitor_gym=True,
+diff --git a/aerial_gym/rl_training/rl_games/sac_aerial_quad_navigation.yaml b/aerial_gym/rl_training/rl_games/sac_aerial_quad_navigation.yaml
+index 52a9379..aaa450f 100644
+--- a/aerial_gym/rl_training/rl_games/sac_aerial_quad_navigation.yaml
++++ b/aerial_gym/rl_training/rl_games/sac_aerial_quad_navigation.yaml
+@@ -4,7 +4,7 @@ params:
+     name: sac #edit algo to sac
+ 
+   model:
+-    name: sac_logstd
++    name: continuous_a2c_logstd
+   
+   load_checkpoint: False
+ 
+@@ -47,7 +47,7 @@ params:
+     normalize_advantage: True
+     gamma: 0.98
+     tau: 0.95
+-    ppo: False
++    ppo: True
+     learning_rate: 1e-4
+     lr_schedule: adaptive
+     kl_threshold: 0.016
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log b/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
+index e69de29..95c54fb 100644
+--- a/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug-cli.shruti.log
+@@ -0,0 +1,34 @@
++2025-04-12 01:00:06 ERROR 400 response executing GraphQL.
++2025-04-12 01:00:06 ERROR {"errors":[{"message":"entityName required for models query","path":["models"]}],"data":{"models":null}}
++2025-04-12 01:00:06 ERROR Traceback (most recent call last):
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
++    return func(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 501, in list_projects
++    self.gql(
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 108, in __call__
++    result = self._call_fn(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 158, in execute
++    return self.client.execute(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
++    result = self._get_result(document, *args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
++    return self.transport.execute(document, *args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
++    request.raise_for_status()
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/requests/models.py", line 1024, in raise_for_status
++    raise HTTPError(http_error_msg, response=self)
++requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
++
++During handling of the above exception, another exception occurred:
++
++Traceback (most recent call last):
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 97, in wrapper
++    return func(*args, **kwargs)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/cli/cli.py", line 192, in projects
++    projects = api.list_projects(entity=entity)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/internal.py", line 64, in list_projects
++    return self.api.list_projects(entity=entity)
++  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/wandb/apis/normalize.py", line 27, in wrapper
++    raise CommError(err.response, err)
++wandb.errors.CommError: <Response [400]>
++
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug-internal.log b/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
+index ca14bbf..bad23fa 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f/logs/debug-internal.log
+\ No newline at end of file
++run-20250412_013517-iah7akyu/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/aerial_gym/rl_training/rl_games/wandb/debug.log b/aerial_gym/rl_training/rl_games/wandb/debug.log
+index da86130..9ad204d 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/debug.log
++++ b/aerial_gym/rl_training/rl_games/wandb/debug.log
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f/logs/debug.log
+\ No newline at end of file
++run-20250412_013517-iah7akyu/logs/debug.log
+\ No newline at end of file
+diff --git a/aerial_gym/rl_training/rl_games/wandb/latest-run b/aerial_gym/rl_training/rl_games/wandb/latest-run
+index f2c5dad..87b3ba5 120000
+--- a/aerial_gym/rl_training/rl_games/wandb/latest-run
++++ b/aerial_gym/rl_training/rl_games/wandb/latest-run
+@@ -1 +1 @@
+-run-20250305_142149-xg7bb06f
+\ No newline at end of file
++run-20250412_013517-iah7akyu
+\ No newline at end of file
+diff --git a/aerial_gym/task/__init__.py b/aerial_gym/task/__init__.py
+index 00b3d38..2d35ddb 100644
+--- a/aerial_gym/task/__init__.py
++++ b/aerial_gym/task/__init__.py
+@@ -99,4 +99,12 @@ task_registry.register_task(
+ #task_registry.register_task("custom_task", CustomTask, custom_task.task_config)
+ 
+ from aerial_gym.task.reach_avoid_task.reach_avoid_task import ReachAvoidTask
+-task_registry.register_task("reach_avoid_task", ReachAvoidTask, reach_avoid_task.task_config)
+\ No newline at end of file
++from aerial_gym.config.task_config.reach_avoid_task_config import (
++    task_config as reach_avoid_task_config,
++)
++
++task_registry.register_task(
++    "reach_avoid_task", 
++    ReachAvoidTask, 
++    reach_avoid_task_config
++)
+\ No newline at end of file
+diff --git a/aerial_gym/task/reach_avoid_task/reach_avoid_task.py b/aerial_gym/task/reach_avoid_task/reach_avoid_task.py
+index 9f127bd..8643db1 100644
+--- a/aerial_gym/task/reach_avoid_task/reach_avoid_task.py
++++ b/aerial_gym/task/reach_avoid_task/reach_avoid_task.py
+@@ -304,7 +304,7 @@ class ReachAvoidTask(BaseTask):
+         # This step must be done since the reset is done after the reward is calculated.
+         # This enables the robot to send back an updated state, and an updated observation to the RL agent after the reset.
+         # This is important for the RL agent to get the correct state after the reset.
+-        self.rewards[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
++        self.rewards[:], self.safety_margin[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
+ 
+         # logger.info(f"Curriculum Level: {self.curriculum_level}")
+ 
+@@ -333,6 +333,7 @@ class ReachAvoidTask(BaseTask):
+         self.infos["successes"] = successes
+         self.infos["timeouts"] = timeouts
+         self.infos["crashes"] = self.terminations
++        self.infos["safety_margin"] = self.safety_margin
+ 
+         self.logging_sanity_check(self.infos)
+         self.check_and_update_curriculum_level(
+@@ -346,7 +347,7 @@ class ReachAvoidTask(BaseTask):
+         self.num_task_steps += 1
+         # do stuff with the image observations here
+         self.process_image_observation()
+-        self.post_image_reward_addition()
++        # self.post_image_reward_addition()
+         if self.task_config.return_state_before_reset == False:
+             return_tuple = self.get_return_tuple()
+         return return_tuple
+@@ -400,21 +401,15 @@ class ReachAvoidTask(BaseTask):
+     def compute_rewards_and_crashes(self, obs_dict):
+         # edit reward evaluation
+         robot_position = obs_dict["robot_position"]
+-        target_position = self.target_position
+-        robot_vehicle_orientation = obs_dict["robot_vehicle_orientation"]
+-        robot_orientation = obs_dict["robot_orientation"]
+-        target_orientation = torch.zeros_like(robot_orientation, device=self.device)
+-        target_orientation[:, 3] = 1.0
+-        self.pos_error_vehicle_frame_prev[:] = self.pos_error_vehicle_frame
+-        self.pos_error_vehicle_frame[:] = quat_rotate_inverse(
+-            robot_vehicle_orientation, (target_position - robot_position)
+-        )
++        robot_linvel = obs_dict["robot_linvel"]
++        angular_velocity = obs_dict["robot_body_angvel"]
++        image_obs = obs_dict["depth_range_pixels"]
+         return compute_reward(
+-            self.pos_error_vehicle_frame,
+-            self.pos_error_vehicle_frame_prev,
++            robot_position,
++            robot_linvel,
++            angular_velocity,
++            image_obs,
+             obs_dict["crashes"],
+-            obs_dict["robot_actions"],
+-            obs_dict["robot_prev_actions"],
+             self.curriculum_progress_fraction,
+             self.task_config.reward_parameters,
+         )
+@@ -438,89 +433,34 @@ def exponential_penalty_function(
+ 
+ @torch.jit.script
+ def compute_reward(
+-    pos_error,
+-    prev_pos_error,
++    robot_pos,
++    robot_linvel,
++    angular_velocity,
++    image_obs,
+     crashes,
+-    action,
+-    prev_action,
+     curriculum_progress_fraction,
+-    parameter_dict,
++    parameter_dict
+ ):
+     # edit reward computation
+-    # type: (Tensor, Tensor, Tensor, Tensor, Tensor, float, Dict[str, Tensor]) -> Tuple[Tensor, Tensor]
+-    MULTIPLICATION_FACTOR_REWARD = 1.0 + (2.0) * curriculum_progress_fraction
+-    dist = torch.norm(pos_error, dim=1)
+-    prev_dist_to_goal = torch.norm(prev_pos_error, dim=1)
+-    pos_reward = exponential_reward_function(
+-        parameter_dict["pos_reward_magnitude"],
+-        parameter_dict["pos_reward_exponent"],
+-        dist,
+-    )
+-    very_close_to_goal_reward = exponential_reward_function(
+-        parameter_dict["very_close_to_goal_reward_magnitude"],
+-        parameter_dict["very_close_to_goal_reward_exponent"],
+-        dist,
+-    )
+ 
+-    getting_closer = prev_dist_to_goal - dist
+-    getting_closer_reward = torch.where(
+-        getting_closer > 0,
+-        parameter_dict["getting_closer_reward_multiplier"] * getting_closer,
+-        2.0 * parameter_dict["getting_closer_reward_multiplier"] * getting_closer,
+-    )
+-
+-    distance_from_goal_reward = (20.0 - dist) / 20.0
+-    action_diff = action - prev_action
+-    x_diff_penalty = exponential_penalty_function(
+-        parameter_dict["x_action_diff_penalty_magnitude"],
+-        parameter_dict["x_action_diff_penalty_exponent"],
+-        action_diff[:, 0],
+-    )
+-    z_diff_penalty = exponential_penalty_function(
+-        parameter_dict["z_action_diff_penalty_magnitude"],
+-        parameter_dict["z_action_diff_penalty_exponent"],
+-        action_diff[:, 2],
+-    )
+-    yawrate_diff_penalty = exponential_penalty_function(
+-        parameter_dict["yawrate_action_diff_penalty_magnitude"],
+-        parameter_dict["yawrate_action_diff_penalty_exponent"],
+-        action_diff[:, 3],
+-    )
+-    action_diff_penalty = x_diff_penalty + z_diff_penalty + yawrate_diff_penalty
+-    # absolute action penalty
+-    x_absolute_penalty = curriculum_progress_fraction * exponential_penalty_function(
+-        parameter_dict["x_absolute_action_penalty_magnitude"],
+-        parameter_dict["x_absolute_action_penalty_exponent"],
+-        action[:, 0],
+-    )
+-    z_absolute_penalty = curriculum_progress_fraction * exponential_penalty_function(
+-        parameter_dict["z_absolute_action_penalty_magnitude"],
+-        parameter_dict["z_absolute_action_penalty_exponent"],
+-        action[:, 2],
+-    )
+-    yawrate_absolute_penalty = curriculum_progress_fraction * exponential_penalty_function(
+-        parameter_dict["yawrate_absolute_action_penalty_magnitude"],
+-        parameter_dict["yawrate_absolute_action_penalty_exponent"],
+-        action[:, 3],
+-    )
+-    absolute_action_penalty = x_absolute_penalty + z_absolute_penalty + yawrate_absolute_penalty
+-    total_action_penalty = action_diff_penalty + absolute_action_penalty
+-
+-    # combined reward
+-    reward = (
+-        MULTIPLICATION_FACTOR_REWARD
+-        * (
+-            pos_reward
+-            + very_close_to_goal_reward
+-            + getting_closer_reward
+-            + distance_from_goal_reward
+-        )
+-        + total_action_penalty
+-    )
++    min_wall_dist = torch.min(torch.cat([robot_pos, 1 - robot_pos]))
++    reward = torch.min(torch.cat((parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 0]),
++                                   parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 1]),
++                                   parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 2]),
++                                   parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 0]),
++                                   parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 1]),
++                                   parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 2]),
++                                   parameter_dict["obs_dist_lmin"] - torch.amin(image_obs, [1,2]),
++                                   parameter_dict["wall_dist_lmin"] - min_wall_dist), 1), 1)[0]
++    
++    g_x = torch.min(torch.cat((parameter_dict["obs_dist_gmin"] - torch.amin(image_obs, [1,2]),
++                                parameter_dict["wall_dist_gmin"] - min_wall_dist), 1), 1)[0]
++
++    # type: (Tensor, Tensor, Tensor, Tensor, Tensor, float, Dict[str, Tensor]) -> Tuple[Tensor, Tensor, Tensor] 
+ 
+     reward[:] = torch.where(
+         crashes > 0,
+         parameter_dict["collision_penalty"] * torch.ones_like(reward),
+         reward,
+     )
+-    return reward, crashes
++    return reward, g_x, crashes

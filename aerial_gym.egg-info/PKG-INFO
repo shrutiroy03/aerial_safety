@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aerial_gym
+Version: 2.0.0
+Summary: Isaac Gym environments for Aerial Robots
+Author: Mihir Kulkarni
+Author-email: mihir.kulkarni@ntnu.no
+License: BSD-3-Clause
+License-File: LICENSE
+Requires-Dist: isaacgym
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: pytorch3d
+Requires-Dist: warp-lang==1.0.0b5
+Requires-Dist: trimesh
+Requires-Dist: urdfpy
+Requires-Dist: numpy==1.23
+Requires-Dist: gymnasium
+Requires-Dist: rl-games
+Requires-Dist: sample-factory

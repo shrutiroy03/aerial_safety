@@ -1,0 +1,104 @@
+[37m[6148 ms][base_task] - INFO : Setting seed: 1082699100 (base_task.py:38)
+[37m[6148 ms][reach_avoid_task] - INFO : Building environment for reach-avoid task. (reach_avoid_task.py:44)
+[37m[6149 ms][reach_avoid_task] - INFO : Sim Name: base_sim, Env Name: env_with_obstacles, Robot Name: lmf2, Controller Name: lmf2_velocity_control (reach_avoid_task.py:45)
+[37m[6149 ms][env_manager] - INFO : Populating environments. (env_manager.py:73)
+[37m[6149 ms][env_manager] - INFO : Creating simulation instance. (env_manager.py:87)
+[37m[6149 ms][env_manager] - INFO : Instantiating IGE object. (env_manager.py:88)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Environment (IGE_env_manager.py:41)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Acquiring gym object (IGE_env_manager.py:73)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Acquired gym object (IGE_env_manager.py:75)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Fixing devices (IGE_env_manager.py:89)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Using GPU pipeline for simulation. (IGE_env_manager.py:102)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Sim Device type: cuda, Sim Device ID: 0 (IGE_env_manager.py:105)
+[31m[6149 ms][IsaacGymEnvManager] - CRITICAL : 
+[31m Setting graphics device to -1.
+[31m This is done because the simulation is run in headless mode and no Isaac Gym cameras are used.
+[31m No need to worry. The simulation and warp rendering will work as expected. (IGE_env_manager.py:112)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Graphics Device ID: -1 (IGE_env_manager.py:119)
+[37m[6149 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Simulation Object (IGE_env_manager.py:120)
+[33m[6150 ms][IsaacGymEnvManager] - WARNING : If you have set the CUDA_VISIBLE_DEVICES environment variable, please ensure that you set it
+[33mto a particular one that works for your system to use the viewer or Isaac Gym cameras.
+[33mIf you want to run parallel simulations on multiple GPUs with camera sensors,
+[33mplease disable Isaac Gym and use warp (by setting use_warp=True), set the viewer to headless. (IGE_env_manager.py:127)
+[33m[6150 ms][IsaacGymEnvManager] - WARNING : If you see a segfault in the next lines, it is because of the discrepancy between the CUDA device and the graphics device.
+[33mPlease ensure that the CUDA device and the graphics device are the same. (IGE_env_manager.py:132)
+[37m[6939 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Simulation Object (IGE_env_manager.py:136)
+[37m[6939 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Environment (IGE_env_manager.py:43)
+[37m[6992 ms][env_manager] - INFO : IGE object instantiated. (env_manager.py:109)
+[37m[6992 ms][env_manager] - INFO : Creating warp environment. (env_manager.py:112)
+[37m[6992 ms][env_manager] - INFO : Warp environment created. (env_manager.py:114)
+[37m[6992 ms][env_manager] - INFO : Creating robot manager. (env_manager.py:118)
+[37m[6992 ms][BaseRobot] - INFO : [DONE] Initializing controller (base_robot.py:26)
+[37m[6992 ms][BaseRobot] - INFO : Initializing controller lmf2_velocity_control (base_robot.py:29)
+[33m[6992 ms][base_multirotor] - WARNING : Creating 1024 multirotors. (base_multirotor.py:32)
+[37m[6992 ms][env_manager] - INFO : [DONE] Creating robot manager. (env_manager.py:123)
+[37m[6992 ms][env_manager] - INFO : [DONE] Creating simulation instance. (env_manager.py:125)
+[37m[6992 ms][asset_loader] - INFO : Loading asset: model.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6993 ms][asset_loader] - INFO : Loading asset: panel.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6994 ms][asset_loader] - INFO : Loading asset: 0_5_x_0_5_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6995 ms][asset_loader] - INFO : Loading asset: cuboidal_rod.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6996 ms][asset_loader] - INFO : Loading asset: 1_x_1_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6997 ms][asset_loader] - INFO : Loading asset: small_cube.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6998 ms][asset_loader] - INFO : Loading asset: left_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6999 ms][asset_loader] - INFO : Loading asset: right_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7000 ms][asset_loader] - INFO : Loading asset: back_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7001 ms][asset_loader] - INFO : Loading asset: front_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7001 ms][asset_loader] - INFO : Loading asset: bottom_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7002 ms][asset_loader] - INFO : Loading asset: top_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7053 ms][env_manager] - INFO : Populating environment 0 (env_manager.py:179)
+[33m[7182 ms][robot_manager] - WARNING : 
+[33mRobot mass: 1.2400000467896461,
+[33mInertia: tensor([[0.0134, 0.0000, 0.0000],
+[33m        [0.0000, 0.0144, 0.0000],
+[33m        [0.0000, 0.0000, 0.0138]], device='cuda:0'),
+[33mRobot COM: tensor([[0., 0., 0., 1.]], device='cuda:0') (robot_manager.py:427)
+[33m[7182 ms][robot_manager] - WARNING : Calculated robot mass and inertia for this robot. This code assumes that your robot is the same across environments. (robot_manager.py:430)
+[31m[7182 ms][robot_manager] - CRITICAL : If your robot differs across environments you need to perform this computation for each different robot here. (robot_manager.py:433)
+using device: cuda:0
+[isaacgym:gymutil.py] Unknown args:  ['--task=reach_avoid_task', '--track', '--wandb-project-name=safe-rl', '--wandb-entity=shrutiroy03-princeton-university']
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+[37m[9464 ms][env_manager] - INFO : Populating environment 1000 (env_manager.py:179)
+[37m[9519 ms][env_manager] - INFO : [DONE] Populating environments. (env_manager.py:75)
+[33m[9588 ms][IsaacGymEnvManager] - WARNING : Headless: True (IGE_env_manager.py:424)
+[37m[9588 ms][IsaacGymEnvManager] - INFO : Headless mode. Viewer not created. (IGE_env_manager.py:434)
+*** Can't create empty tensor
+[33m[10476 ms][asset_manager] - WARNING : Number of obstacles to be kept in the environment: 9 (asset_manager.py:32)
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/control/motor_model.py:45: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.min_thrust, device=self.device, dtype=torch.float32).expand(
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/control/motor_model.py:48: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.max_thrust, device=self.device, dtype=torch.float32).expand(
+[33m[10672 ms][control_allocation] - WARNING : Control allocation does not account for actuator limits. This leads to suboptimal allocation (control_allocation.py:48)
+[37m[10673 ms][WarpSensor] - INFO : Camera sensor initialized (warp_sensor.py:50)
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/utils/vae/vae_image_encoder.py:29: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = clean_state_dict(torch.load(weight_file_path))
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 454, in <module>
+    actor_optim = optim.Adam(agent.actor.parameters(), lr=args.actor_lr, eps=1e-5)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'Agent' object has no attribute 'actor'
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 454, in <module>
+    actor_optim = optim.Adam(agent.actor.parameters(), lr=args.actor_lr, eps=1e-5)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'Agent' object has no attribute 'actor'
+WARNING: allocation matrix is not full rank. Rank: 4
+creating render graph
+Module warp.utils load on device 'cuda:0' took 1.30 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_camera_kernels load on device 'cuda:0' took 7.01 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_stereo_camera_kernels load on device 'cuda:0' took 9.97 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_lidar_kernels load on device 'cuda:0' took 4.94 ms
+finishing capture of render graph
+Encoder network initialized.
+Defined encoder.
+[ImgDecoder] Starting create_model
+[ImgDecoder] Done with create_model
+Defined decoder.
+Loading weights from file:  /home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/utils/vae/weights/ICRA_test_set_more_sim_data_kld_beta_3_LD_64_epoch_49.pth
+num actions:  4
+num obs:  81

@@ -1,0 +1,38 @@
+diff --git a/aerial_gym/config/task_config/navigation_task_config.py b/aerial_gym/config/task_config/navigation_task_config.py
+index 7ecbda5..2f838d7 100644
+--- a/aerial_gym/config/task_config/navigation_task_config.py
++++ b/aerial_gym/config/task_config/navigation_task_config.py
+@@ -19,7 +19,7 @@ class task_config:
+     episode_len_steps = 100  # real physics time for simulation is this value multiplied by sim.dt
+ 
+     return_state_before_reset = (
+-        False  # False as usually state is returned for next episode after reset
++        True  # False as usually state is returned for next episode after reset
+     )
+     # user can set the above to true if they so desire
+ 
+diff --git a/aerial_gym/rl_training/rl_games/runner.py b/aerial_gym/rl_training/rl_games/runner.py
+index 7e8ffb4..bd45a3c 100644
+--- a/aerial_gym/rl_training/rl_games/runner.py
++++ b/aerial_gym/rl_training/rl_games/runner.py
+@@ -255,7 +255,7 @@ def get_args():
+             "name": "--use_warp",
+             "type": lambda x: bool(distutils.util.strtobool(x)),
+             "default": "True",
+-            "help": "Choose whether to use warp or Isaac Gym rendeing pipeline.",
++            "help": "Choose whether to use warp or Isaac Gym rendering pipeline.",
+         },
+     ]
+ 
+diff --git a/aerial_gym/task/__init__.py b/aerial_gym/task/__init__.py
+index 7dd966d..7975a4d 100644
+--- a/aerial_gym/task/__init__.py
++++ b/aerial_gym/task/__init__.py
+@@ -95,5 +95,5 @@ task_registry.register_task(
+ 
+ ## Uncomment this to use custom tasks
+ 
+-# from aerial_gym.task.custom_task.custom_task import CustomTask
+-# task_registry.register_task("custom_task", CustomTask, custom_task.task_config)
++#from aerial_gym.task.custom_task.custom_task import CustomTask
++#task_registry.register_task("custom_task", CustomTask, custom_task.task_config)

@@ -1,0 +1,156 @@
+{
+    "os": "Linux-6.5.0-44-generic-x86_64-with-glibc2.17",
+    "python": "3.8.20",
+    "heartbeatAt": "2025-03-05T18:44:40.064758",
+    "startedAt": "2025-03-05T18:44:39.725016",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--file=./ppo_aerial_quad_navigation.yaml",
+        "--num_envs=16",
+        "--play",
+        "--checkpoint=./runs/gen_ppo_26-16-11-42/nn/last_gen_ppo_ep_500_rew__377.14606_.pth",
+        "--track",
+        "wandb-project-name=Trained_RL_Navigation",
+        "wandb-entity=shrutiroy03"
+    ],
+    "state": "running",
+    "program": "runner.py",
+    "codePathLocal": "runner.py",
+    "codePath": "aerial_gym/rl_training/rl_games/runner.py",
+    "git": {
+        "remote": "https://github.com/ntnu-arl/aerial_gym_simulator.git",
+        "commit": "85114e7514ed0f3f8cfecfa23c40dad106c528a1"
+    },
+    "email": null,
+    "root": "/home/shruti/workspaces/aerial_gym_ws/src/aerial_gym_simulator",
+    "host": "saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM",
+    "username": "shruti",
+    "executable": "/home/shruti/miniconda3/envs/aerialgym/bin/python3",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 1365.84055,
+        "min": 400.0,
+        "max": 4180.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2594.846,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2388.962,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3884.603,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2869.356,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.338,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2679.777,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2470.393,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1593.754,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1652.652,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 400.234,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 665.296,
+            "min": 400.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 937.3305015563965,
+            "used": 231.7351951599121
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.238018035888672
+    }
+}
