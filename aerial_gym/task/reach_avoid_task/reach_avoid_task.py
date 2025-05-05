@@ -106,7 +106,7 @@ class ReachAvoidTask(BaseTask):
 
         self.terminations = self.obs_dict["crashes"]
         self.truncations = self.obs_dict["truncations"]
-        self.rewards = torch.zeros(self.truncations.shape[0], device=self.device)
+        self.rewards = torch.zeros([self.truncations.shape[0],2], device=self.device)
 
         self.observation_space = Dict(
             {
@@ -304,7 +304,7 @@ class ReachAvoidTask(BaseTask):
         # This step must be done since the reset is done after the reward is calculated.
         # This enables the robot to send back an updated state, and an updated observation to the RL agent after the reset.
         # This is important for the RL agent to get the correct state after the reset.
-        self.rewards[:], self.safety_margin[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
+        self.rewards[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
 
         # logger.info(f"Curriculum Level: {self.curriculum_level}")
 
@@ -320,7 +320,8 @@ class ReachAvoidTask(BaseTask):
         # edit success logic
         # successes are are the sum of the environments which are to be truncated and have reached the target within a distance threshold
         successes = self.truncations * (
-            torch.norm(self.target_position - self.obs_dict["robot_position"], dim=1) < 1.0
+            #torch.norm(self.target_position - self.obs_dict["robot_position"], dim=1) < 1.0
+            self.rewards[:,0] > 0
         )
         successes = torch.where(self.terminations > 0, torch.zeros_like(successes), successes)
         timeouts = torch.where(
@@ -333,7 +334,7 @@ class ReachAvoidTask(BaseTask):
         self.infos["successes"] = successes
         self.infos["timeouts"] = timeouts
         self.infos["crashes"] = self.terminations
-        self.infos["safety_margin"] = self.safety_margin
+        # self.infos["safety_margin"] = safety_margin
 
         self.logging_sanity_check(self.infos)
         self.check_and_update_curriculum_level(
@@ -444,26 +445,68 @@ def compute_reward(
     curriculum_progress_fraction,
     parameter_dict
 ):
-    # type: (Tensor, Tensor, Tensor, Tensor, Tensor, Tensor, float, Dict[str, Tensor]) -> Tuple[Tensor, Tensor, Tensor] 
-    # edit reward (l(x)) computation
     min_wall_dist = torch.min(torch.cat([robot_pos, 1 - robot_pos], 1), 1)[0]
-    reward = torch.min(torch.cat(((parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 0])).unsqueeze(1),
-                                   (parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 1])).unsqueeze(1),
-                                   (parameter_dict["velocity_max"] - torch.abs(robot_linvel[:, 2])).unsqueeze(1),
-                                   (parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 0])).unsqueeze(1),
-                                   (parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 1])).unsqueeze(1),
-                                   (parameter_dict["angvel_max"] - torch.abs(angular_velocity[:, 2])).unsqueeze(1),
-                                   (parameter_dict["angle_max"] - torch.abs(euler_angles[:, 0])).unsqueeze(1),
-                                   (parameter_dict["angle_max"] - torch.abs(euler_angles[:, 1])).unsqueeze(1),
-                                   (parameter_dict["obs_dist_lmin"] - torch.amin(image_obs, [1,2])).unsqueeze(1),
-                                   (parameter_dict["wall_dist_lmin"] - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+    min_obs_dist = torch.amin(image_obs, dim=(2, 3)).squeeze(1)
     
-    g_x = torch.min(torch.cat(((parameter_dict["obs_dist_gmin"] - torch.amin(image_obs, [1,2])).unsqueeze(1),
-                                (parameter_dict["wall_dist_gmin"] - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+    velocity_max = torch.tensor(parameter_dict["velocity_max"], device=robot_linvel.device)
+    angvel_max = torch.tensor(parameter_dict["angvel_max"], device=angular_velocity.device)
+    angle_max = torch.tensor(parameter_dict["angle_max"], device=euler_angles.device)
+    obs_lmin = torch.tensor(parameter_dict["obs_dist_lmin"], device=robot_linvel.device)
+    wall_lmin = torch.tensor(parameter_dict["wall_dist_lmin"], device=min_wall_dist.device)
+
+
+    obs_gmin = torch.tensor(parameter_dict["obs_dist_gmin"], device=robot_linvel.device)
+    wall_gmin = torch.tensor(parameter_dict["wall_dist_gmin"], device=min_wall_dist.device)
+
+    # type: (Tensor, Tensor, Tensor, Tensor, Tensor, Tensor, float, Dict[str, Tensor]) -> Tuple[Tensor, Tensor] 
+    # edit reward (l(x)) computation
+    # vel_diff = velocity_max - torch.abs(robot_linvel)
+    # angvel_diff = angvel_max - torch.abs(angular_velocity)
+    # angle_diff = angle_max - torch.abs(euler_angles[:, ])
+    # vel_min = torch.min(vel_diff, dim=1)[0]
+
+    # reward = torch.min(torch.cat(((velocity_max - torch.abs(robot_linvel[:, 0])).unsqueeze(1),
+    #                                (velocity_max - torch.abs(robot_linvel[:, 1])).unsqueeze(1),
+    #                                (velocity_max - torch.abs(robot_linvel[:, 2])).unsqueeze(1),
+    #                                (angvel_max - torch.abs(angular_velocity[:, 0])).unsqueeze(1),
+    #                                (angvel_max - torch.abs(angular_velocity[:, 1])).unsqueeze(1),
+    #                                (angvel_max - torch.abs(angular_velocity[:, 2])).unsqueeze(1),
+    #                                (angle_max - torch.abs(euler_angles[:, 0])).unsqueeze(1),
+    #                                (angle_max - torch.abs(euler_angles[:, 1])).unsqueeze(1),
+    #                                (obs_lmin - torch.amin(image_obs, [1,2])).unsqueeze(1),
+    #                                (wall_lmin - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+    
+    # print("Robot linear velocity:",robot_linvel)
+    # print("Robot angular velocity:",angular_velocity)
+    # print("Robot angles:",euler_angles)
+    # print("Obstacle distance:",min_obs_dist)
+    # print("Position:", robot_pos)
+    # print("Wall distance:", min_wall_dist)
+
+    abs_metrics = torch.stack([velocity_max - torch.abs(robot_linvel[:, 0]),
+                                velocity_max - torch.abs(robot_linvel[:, 1]),
+                                velocity_max - torch.abs(robot_linvel[:, 2]),
+                                angvel_max - torch.abs(angular_velocity[:, 0]),
+                                angvel_max - torch.abs(angular_velocity[:, 1]),
+                                angvel_max - torch.abs(angular_velocity[:, 2]),
+                                angle_max - torch.abs(euler_angles[:, 0]),
+                                angle_max - torch.abs(euler_angles[:, 1]),
+                                min_obs_dist - obs_lmin #, min_wall_dist - wall_lmin
+                              ], dim=1)  # shape: [num_envs, 10]
+    reward = torch.min(abs_metrics, dim=1)[0]
+    
+    # g_x = torch.min(torch.cat(((obs_gmin - torch.amin(image_obs, [1,2])).unsqueeze(1),
+    #                             (wall_gmin - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+
+    g_x_metrics = torch.stack([min_obs_dist - obs_gmin #,  # shape: [num_envs]
+                                #min_wall_dist - wall_gmin                     # shape: [num_envs]
+                              ], dim=1)  # shape: [num_envs, 2]
+    g_x = torch.min(g_x_metrics, dim=1)[0]  # shape: [num_envs]
+
 
     reward[:] = torch.where(
         crashes > 0,
         parameter_dict["collision_penalty"] * torch.ones_like(reward),
         reward,
     )
-    return reward, g_x, crashes
+    return torch.stack([reward, g_x], dim=1), crashes

@@ -1,0 +1,306 @@
+[37m[6298 ms][base_task] - INFO : Setting seed: 2238005021 (base_task.py:38)
+[37m[6298 ms][reach_avoid_task] - INFO : Building environment for reach-avoid task. (reach_avoid_task.py:44)
+[37m[6298 ms][reach_avoid_task] - INFO : Sim Name: base_sim, Env Name: env_with_obstacles, Robot Name: lmf2, Controller Name: lmf2_velocity_control (reach_avoid_task.py:45)
+[37m[6298 ms][env_manager] - INFO : Populating environments. (env_manager.py:73)
+[37m[6298 ms][env_manager] - INFO : Creating simulation instance. (env_manager.py:87)
+[37m[6298 ms][env_manager] - INFO : Instantiating IGE object. (env_manager.py:88)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Environment (IGE_env_manager.py:41)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Acquiring gym object (IGE_env_manager.py:73)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Acquired gym object (IGE_env_manager.py:75)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Fixing devices (IGE_env_manager.py:89)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Using GPU pipeline for simulation. (IGE_env_manager.py:102)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Sim Device type: cuda, Sim Device ID: 0 (IGE_env_manager.py:105)
+[31m[6299 ms][IsaacGymEnvManager] - CRITICAL : 
+[31m Setting graphics device to -1.
+[31m This is done because the simulation is run in headless mode and no Isaac Gym cameras are used.
+[31m No need to worry. The simulation and warp rendering will work as expected. (IGE_env_manager.py:112)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Graphics Device ID: -1 (IGE_env_manager.py:119)
+[37m[6299 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Simulation Object (IGE_env_manager.py:120)
+[33m[6299 ms][IsaacGymEnvManager] - WARNING : If you have set the CUDA_VISIBLE_DEVICES environment variable, please ensure that you set it
+[33mto a particular one that works for your system to use the viewer or Isaac Gym cameras.
+[33mIf you want to run parallel simulations on multiple GPUs with camera sensors,
+[33mplease disable Isaac Gym and use warp (by setting use_warp=True), set the viewer to headless. (IGE_env_manager.py:127)
+[33m[6299 ms][IsaacGymEnvManager] - WARNING : If you see a segfault in the next lines, it is because of the discrepancy between the CUDA device and the graphics device.
+[33mPlease ensure that the CUDA device and the graphics device are the same. (IGE_env_manager.py:132)
+[37m[7095 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Simulation Object (IGE_env_manager.py:136)
+[37m[7096 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Environment (IGE_env_manager.py:43)
+[37m[7164 ms][env_manager] - INFO : IGE object instantiated. (env_manager.py:109)
+[37m[7164 ms][env_manager] - INFO : Creating warp environment. (env_manager.py:112)
+[37m[7164 ms][env_manager] - INFO : Warp environment created. (env_manager.py:114)
+[37m[7164 ms][env_manager] - INFO : Creating robot manager. (env_manager.py:118)
+[37m[7164 ms][BaseRobot] - INFO : [DONE] Initializing controller (base_robot.py:26)
+[37m[7164 ms][BaseRobot] - INFO : Initializing controller lmf2_velocity_control (base_robot.py:29)
+[33m[7164 ms][base_multirotor] - WARNING : Creating 128 multirotors. (base_multirotor.py:32)
+[37m[7164 ms][env_manager] - INFO : [DONE] Creating robot manager. (env_manager.py:123)
+[37m[7164 ms][env_manager] - INFO : [DONE] Creating simulation instance. (env_manager.py:125)
+[37m[7164 ms][asset_loader] - INFO : Loading asset: model.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7164 ms][asset_loader] - INFO : Loading asset: panel.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7167 ms][asset_loader] - INFO : Loading asset: cuboidal_rod.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7168 ms][asset_loader] - INFO : Loading asset: small_cube.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7169 ms][asset_loader] - INFO : Loading asset: 1_x_1_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7169 ms][asset_loader] - INFO : Loading asset: left_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7170 ms][asset_loader] - INFO : Loading asset: right_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7171 ms][asset_loader] - INFO : Loading asset: back_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7172 ms][asset_loader] - INFO : Loading asset: front_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7173 ms][asset_loader] - INFO : Loading asset: bottom_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7174 ms][asset_loader] - INFO : Loading asset: top_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7175 ms][asset_loader] - INFO : Loading asset: 0_5_x_0_5_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[7183 ms][env_manager] - INFO : Populating environment 0 (env_manager.py:179)
+[33m[7334 ms][robot_manager] - WARNING : 
+[33mRobot mass: 1.2400000467896461,
+[33mInertia: tensor([[0.0134, 0.0000, 0.0000],
+[33m        [0.0000, 0.0144, 0.0000],
+[33m        [0.0000, 0.0000, 0.0138]], device='cuda:0'),
+[33mRobot COM: tensor([[0., 0., 0., 1.]], device='cuda:0') (robot_manager.py:427)
+[33m[7334 ms][robot_manager] - WARNING : Calculated robot mass and inertia for this robot. This code assumes that your robot is the same across environments. (robot_manager.py:430)
+[31m[7334 ms][robot_manager] - CRITICAL : If your robot differs across environments you need to perform this computation for each different robot here. (robot_manager.py:433)
+[37m[7510 ms][env_manager] - INFO : [DONE] Populating environments. (env_manager.py:75)
+[33m[7523 ms][IsaacGymEnvManager] - WARNING : Headless: True (IGE_env_manager.py:424)
+[37m[7523 ms][IsaacGymEnvManager] - INFO : Headless mode. Viewer not created. (IGE_env_manager.py:434)
+[33m[7664 ms][asset_manager] - WARNING : Number of obstacles to be kept in the environment: 9 (asset_manager.py:32)
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/control/motor_model.py:45: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.min_thrust, device=self.device, dtype=torch.float32).expand(
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/control/motor_model.py:48: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.max_thrust, device=self.device, dtype=torch.float32).expand(
+[33m[7881 ms][control_allocation] - WARNING : Control allocation does not account for actuator limits. This leads to suboptimal allocation (control_allocation.py:48)
+[37m[7882 ms][WarpSensor] - INFO : Camera sensor initialized (warp_sensor.py:50)
+using device: cuda:0
+[isaacgym:gymutil.py] Unknown args:  ['--task=reach_avoid_task', '--track', '--wandb-project-name=safe-rl', '--wandb-entity=shrutiroy03-princeton-university']
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+*** Can't create empty tensor
+WARNING: allocation matrix is not full rank. Rank: 4
+creating render graph
+Module warp.utils load on device 'cuda:0' took 1.30 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_camera_kernels load on device 'cuda:0' took 7.01 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_stereo_camera_kernels load on device 'cuda:0' took 10.21 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_lidar_kernels load on device 'cuda:0' took 5.02 ms
+finishing capture of render graph
+num actions:  4
+num obs:  81
+global_step=128, episodic_return=-100.0
+sac_continuous_action.py:578: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  actions[step] = torch.tensor(action, dtype=torch.float32, device=device)
+[31m[9664 ms][reach_avoid_task] - CRITICAL : Crash is happening too soon. (reach_avoid_task.py:197)
+[31m[9665 ms][reach_avoid_task] - CRITICAL : Envs crashing too soon: tensor([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,
+[31m         14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,  26,  27,
+[31m         28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,  39,  40,  41,
+[31m         42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,
+[31m         56,  57,  58,  59,  60,  61,  62,  63,  64,  65,  66,  67,  68,  69,
+[31m         70,  71,  72,  73,  74,  75,  76,  77,  78,  79,  80,  81,  82,  83,
+[31m         84,  85,  86,  87,  88,  89,  90,  91,  92,  93,  94,  95,  96,  97,
+[31m         98,  99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+[31m        112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
+[31m        126, 127], device='cuda:0') (reach_avoid_task.py:198)
+[31m[9666 ms][reach_avoid_task] - CRITICAL : Time at crash: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+[31m        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+[31m        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+[31m        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+[31m        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+[31m        1, 1, 1, 1, 1, 1, 1, 1], device='cuda:0', dtype=torch.int32) (reach_avoid_task.py:199)
+SPS: 784
+global_step=4224, episodic_return=-127.4814682006836
+global_step=4352, episodic_return=-129.90982055664062
+global_step=4480, episodic_return=-117.90379333496094
+SPS: 1020
+global_step=8320, episodic_return=-151.27627563476562
+SPS: 1150
+SPS: 1228
+global_step=16512, episodic_return=-87.32762145996094
+global_step=16640, episodic_return=-87.06678771972656
+global_step=16768, episodic_return=-85.17662811279297
+SPS: 1271
+SPS: 1305
+global_step=24960, episodic_return=-84.38921356201172
+SPS: 1321
+global_step=28800, episodic_return=-83.4643325805664
+global_step=28928, episodic_return=-84.00367736816406
+SPS: 1338
+global_step=33152, episodic_return=-84.50267028808594
+SPS: 1359
+SPS: 1373
+global_step=41088, episodic_return=-84.64811706542969
+global_step=41216, episodic_return=-83.36885070800781
+global_step=41344, episodic_return=-85.17068481445312
+SPS: 1384
+global_step=45184, episodic_return=-84.97566986083984
+global_step=45312, episodic_return=-84.80985260009766
+SPS: 1394
+SPS: 1403
+global_step=53376, episodic_return=-84.79862976074219
+global_step=53632, episodic_return=-84.416748046875
+SPS: 1411
+global_step=57472, episodic_return=-84.68016052246094
+global_step=57600, episodic_return=-86.10580444335938
+SPS: 1417
+global_step=61696, episodic_return=-83.99783325195312
+SPS: 1424
+SPS: 1428
+global_step=69760, episodic_return=-84.81182098388672
+global_step=69888, episodic_return=-85.90536499023438
+global_step=70016, episodic_return=-84.26712036132812
+SPS: 1433
+SPS: 1438
+SPS: 1439
+global_step=82048, episodic_return=-85.412841796875
+global_step=82304, episodic_return=-84.81922912597656
+SPS: 1442
+SPS: 1445
+SPS: 1449
+global_step=94336, episodic_return=-84.38304901123047
+global_step=94464, episodic_return=-82.96031951904297
+global_step=94592, episodic_return=-83.9837875366211
+SPS: 1453
+global_step=98432, episodic_return=-82.76561737060547
+global_step=98688, episodic_return=-83.53746795654297
+SPS: 1454
+global_step=102528, episodic_return=-86.03116607666016
+SPS: 1457
+global_step=106752, episodic_return=-85.22733306884766
+global_step=106880, episodic_return=-84.54730987548828
+SPS: 1458
+global_step=110720, episodic_return=-84.18826293945312
+global_step=110976, episodic_return=-83.35454559326172
+SPS: 1459
+SPS: 1461
+global_step=118912, episodic_return=-84.77922058105469
+global_step=119040, episodic_return=-82.68042755126953
+global_step=119168, episodic_return=-84.63507843017578
+SPS: 1462
+global_step=123264, episodic_return=-84.54051208496094
+SPS: 1465
+SPS: 1466
+global_step=131200, episodic_return=-84.70105743408203
+global_step=131328, episodic_return=-86.29432678222656
+global_step=131456, episodic_return=-84.1246337890625
+SPS: 1467
+SPS: 1469
+SPS: 1470
+SPS: 1471
+global_step=147584, episodic_return=-83.8788833618164
+global_step=147712, episodic_return=-83.32306671142578
+global_step=147840, episodic_return=-82.80491638183594
+SPS: 1472
+SPS: 1474
+SPS: 1475
+global_step=159872, episodic_return=-85.30741119384766
+global_step=160000, episodic_return=-83.89370727539062
+global_step=160128, episodic_return=-85.19293975830078
+SPS: 1477
+SPS: 1477
+global_step=168064, episodic_return=-180.8069610595703
+global_step=168192, episodic_return=-84.1326904296875
+SPS: 1477
+global_step=172160, episodic_return=-83.62054443359375
+global_step=172288, episodic_return=-83.43209075927734
+global_step=172416, episodic_return=-85.8021469116211
+SPS: 1476
+global_step=176256, episodic_return=-83.33753204345703
+global_step=176384, episodic_return=-86.14064025878906
+SPS: 1478
+SPS: 1479
+global_step=184448, episodic_return=-85.50617218017578
+global_step=184576, episodic_return=-85.16339111328125
+global_step=184704, episodic_return=-83.62264251708984
+SPS: 1480
+global_step=188544, episodic_return=-83.32233428955078
+[33m[138860 ms][reach_avoid_task] - WARNING : Curriculum Level: 15, Curriculum progress fraction: 0.0 (reach_avoid_task.py:264)
+[33m[138860 ms][reach_avoid_task] - WARNING : 
+[33mSuccess Rate: 0.0
+[33mCrash Rate: 0.126953125
+[33mTimeout Rate: 0.873046875 (reach_avoid_task.py:267)
+[33m[138860 ms][reach_avoid_task] - WARNING : 
+[33mSuccesses: 0
+[33mCrashes : 260
+[33mTimeouts: 1788 (reach_avoid_task.py:270)
+SPS: 1480
+SPS: 1481
+global_step=196736, episodic_return=-84.0785903930664
+global_step=196864, episodic_return=-84.45661163330078
+global_step=196992, episodic_return=-84.2354507446289
+SPS: 1481
+global_step=200832, episodic_return=-83.66903686523438
+SPS: 1482
+Saving model.
+SPS: 1482
+global_step=209024, episodic_return=-84.0133056640625
+global_step=209152, episodic_return=-83.26660919189453
+global_step=209280, episodic_return=-84.5745849609375
+SPS: 1482
+global_step=213248, episodic_return=-85.2581558227539
+global_step=213376, episodic_return=-83.62958526611328
+SPS: 1481
+SPS: 1480
+global_step=221440, episodic_return=-84.69902038574219
+SPS: 1480
+global_step=225408, episodic_return=-85.0566177368164
+global_step=225536, episodic_return=-84.5737075805664
+global_step=225664, episodic_return=-83.2552261352539
+SPS: 1480
+global_step=229504, episodic_return=-84.68688201904297
+SPS: 1481
+SPS: 1481
+global_step=237696, episodic_return=-85.86972045898438
+global_step=237824, episodic_return=-87.32511901855469
+global_step=237952, episodic_return=-84.52347564697266
+SPS: 1482
+SPS: 1483
+SPS: 1482
+global_step=249984, episodic_return=-84.74848175048828
+global_step=250112, episodic_return=-83.45657348632812
+SPS: 1480
+SPS: 1481
+SPS: 1481
+global_step=262272, episodic_return=-83.57305908203125
+global_step=262400, episodic_return=-84.57180786132812
+global_step=262528, episodic_return=-84.43231964111328
+SPS: 1481
+global_step=266368, episodic_return=-84.07835388183594
+global_step=266496, episodic_return=-83.3476791381836
+SPS: 1482
+global_step=270592, episodic_return=-84.1891098022461
+SPS: 1483
+global_step=274560, episodic_return=-84.80329895019531
+global_step=274816, episodic_return=-84.56021881103516
+SPS: 1483
+global_step=278784, episodic_return=-84.46125030517578
+SPS: 1484
+global_step=282752, episodic_return=-85.39655303955078
+SPS: 1485
+global_step=286848, episodic_return=-83.51371002197266
+global_step=286976, episodic_return=-84.47840118408203
+global_step=287104, episodic_return=-83.01335906982422
+SPS: 1485
+global_step=290944, episodic_return=-83.62368774414062
+global_step=291072, episodic_return=-84.51407623291016
+SPS: 1485
+SPS: 1486
+global_step=299264, episodic_return=-84.77526092529297
+global_step=299392, episodic_return=-84.3267593383789
+SPS: 1486
+global_step=303232, episodic_return=-84.25275421142578
+SPS: 1486
+SPS: 1486
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 634, in <module>
+    _, newlogprob, entropy, newq1, newq2 = agent.get_action_and_value(
+  File "sac_continuous_action.py", line 442, in get_action_and_value
+    probs = Normal(action_mean, action_std)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/distributions/normal.py", line 57, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/distributions/distribution.py", line 69, in __init__
+    if not valid.all():
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 634, in <module>
+    _, newlogprob, entropy, newq1, newq2 = agent.get_action_and_value(
+  File "sac_continuous_action.py", line 442, in get_action_and_value
+    probs = Normal(action_mean, action_std)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/distributions/normal.py", line 57, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/torch/distributions/distribution.py", line 69, in __init__
+    if not valid.all():
+KeyboardInterrupt

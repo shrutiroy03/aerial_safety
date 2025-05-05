@@ -1,0 +1,183 @@
+2025-05-05 05:36:11,243 INFO    MainThread:11873 [internal.py:wandb_internal():90] W&B internal server running at pid: 11873, started at: 2025-05-05 05:36:11.243513
+2025-05-05 05:36:11,245 INFO    WriterThread:11873 [datastore.py:open_for_write():75] open: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/run-o3q7qbbg.wandb
+2025-05-05 05:36:11,246 DEBUG   SenderThread:11873 [sender.py:send():236] send: header
+2025-05-05 05:36:11,246 DEBUG   SenderThread:11873 [sender.py:send():236] send: run
+2025-05-05 05:36:11,460 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: check_version
+2025-05-05 05:36:11,461 INFO    SenderThread:11873 [dir_watcher.py:__init__():216] watching files in: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files
+2025-05-05 05:36:11,462 INFO    SenderThread:11873 [sender.py:_start_run_threads():815] run started: o3q7qbbg with start time 1746437770
+2025-05-05 05:36:11,462 DEBUG   SenderThread:11873 [sender.py:send():236] send: summary
+2025-05-05 05:36:11,462 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-05-05 05:36:11,462 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: check_version
+2025-05-05 05:36:11,520 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: run_start
+2025-05-05 05:36:11,532 DEBUG   HandlerThread:11873 [meta.py:__init__():35] meta init
+2025-05-05 05:36:11,532 DEBUG   HandlerThread:11873 [meta.py:__init__():49] meta init done
+2025-05-05 05:36:11,532 DEBUG   HandlerThread:11873 [meta.py:probe():209] probe
+2025-05-05 05:36:11,545 DEBUG   HandlerThread:11873 [meta.py:_setup_git():199] setup git
+2025-05-05 05:36:11,557 DEBUG   HandlerThread:11873 [meta.py:_setup_git():206] setup git done
+2025-05-05 05:36:11,557 DEBUG   HandlerThread:11873 [meta.py:_save_code():87] save code
+2025-05-05 05:36:11,562 DEBUG   HandlerThread:11873 [meta.py:_save_code():108] save code done
+2025-05-05 05:36:11,562 DEBUG   HandlerThread:11873 [meta.py:_save_patches():125] save patches
+2025-05-05 05:36:11,608 DEBUG   HandlerThread:11873 [meta.py:_save_patches():167] save patches done
+2025-05-05 05:36:11,608 DEBUG   HandlerThread:11873 [meta.py:_save_pip():53] save pip
+2025-05-05 05:36:11,608 DEBUG   HandlerThread:11873 [meta.py:_save_pip():67] save pip done
+2025-05-05 05:36:11,608 DEBUG   HandlerThread:11873 [meta.py:_save_conda():74] save conda
+2025-05-05 05:36:12,463 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py
+2025-05-05 05:36:12,463 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/conda-environment.yaml
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/diff.patch
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/requirements.txt
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-summary.json
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code/aerial_gym/rl_training/cleanrl
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code/aerial_gym
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code/aerial_gym/rl_training
+2025-05-05 05:36:12,464 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code
+2025-05-05 05:36:13,213 DEBUG   HandlerThread:11873 [meta.py:_save_conda():84] save conda done
+2025-05-05 05:36:13,213 DEBUG   HandlerThread:11873 [meta.py:probe():247] probe done
+2025-05-05 05:36:13,232 DEBUG   SenderThread:11873 [sender.py:send():236] send: files
+2025-05-05 05:36:13,232 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-05-05 05:36:13,232 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py with policy now
+2025-05-05 05:36:13,232 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file diff.patch with policy now
+2025-05-05 05:36:13,235 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: stop_status
+2025-05-05 05:36:13,236 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: stop_status
+2025-05-05 05:36:13,236 INFO    HandlerThread:11873 [handler.py:handle_tbrecord():723] handling tbrecord: tbrecord {
+  log_dir: "runs/reach_avoid_task__sac_continuous_action__1__1746437770"
+  save: true
+}
+
+2025-05-05 05:36:13,240 DEBUG   HandlerThread:11873 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2025-05-05 05:36:13,363 DEBUG   SenderThread:11873 [sender.py:send():236] send: telemetry
+2025-05-05 05:36:13,363 DEBUG   SenderThread:11873 [sender.py:send():236] send: tbrecord
+2025-05-05 05:36:13,363 DEBUG   SenderThread:11873 [sender.py:send():236] send: files
+2025-05-05 05:36:13,363 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file events.out.tfevents.1746437773.saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM.11797.0 with policy live
+2025-05-05 05:36:13,385 INFO    Thread-12 :11873 [upload_job.py:push():118] Skipped uploading /tmp/tmp1r0_atq2wandb/z80i2jag-code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py
+2025-05-05 05:36:13,462 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/conda-environment.yaml
+2025-05-05 05:36:13,462 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-metadata.json
+2025-05-05 05:36:13,463 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log
+2025-05-05 05:36:13,463 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_created():269] file/dir created: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/events.out.tfevents.1746437773.saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM.11797.0
+2025-05-05 05:36:13,554 INFO    Thread-11 :11873 [upload_job.py:push():138] Uploaded file /tmp/tmp1r0_atq2wandb/x3t89td9-wandb-metadata.json
+2025-05-05 05:36:13,602 INFO    Thread-14 :11873 [upload_job.py:push():138] Uploaded file /tmp/tmp1r0_atq2wandb/vqhagz3q-diff.patch
+2025-05-05 05:36:13,669 INFO    Thread-16 :11873 [upload_job.py:push():138] Uploaded file /tmp/tmp1r0_atq2wandb/i1zlfic2-events.out.tfevents.1746437773.saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM.11797.0
+2025-05-05 05:36:15,463 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log
+2025-05-05 05:36:16,408 DEBUG   SenderThread:11873 [sender.py:send():236] send: telemetry
+2025-05-05 05:36:17,465 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log
+2025-05-05 05:36:18,504 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:18,504 DEBUG   SenderThread:11873 [sender.py:send():236] send: exit
+2025-05-05 05:36:18,505 INFO    SenderThread:11873 [sender.py:send_exit():372] handling exit code: 1
+2025-05-05 05:36:18,505 INFO    SenderThread:11873 [sender.py:send_exit():374] handling runtime: 6
+2025-05-05 05:36:18,506 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-05-05 05:36:18,506 INFO    SenderThread:11873 [sender.py:send_exit():380] send defer
+2025-05-05 05:36:18,506 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:18,507 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:18,507 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 0
+2025-05-05 05:36:18,508 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:18,508 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 0
+2025-05-05 05:36:18,508 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 1
+2025-05-05 05:36:18,508 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:18,509 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 1
+2025-05-05 05:36:18,616 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:18,616 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 1
+2025-05-05 05:36:18,616 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 2
+2025-05-05 05:36:18,616 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:18,616 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:18,617 DEBUG   SenderThread:11873 [sender.py:send():236] send: stats
+2025-05-05 05:36:18,618 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:18,618 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 2
+2025-05-05 05:36:18,618 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:18,618 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 2
+2025-05-05 05:36:18,618 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 3
+2025-05-05 05:36:18,618 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:18,618 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 3
+2025-05-05 05:36:19,467 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log
+2025-05-05 05:36:19,468 INFO    Thread-7  :11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-summary.json
+2025-05-05 05:36:24,279 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:24,280 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 3
+2025-05-05 05:36:24,280 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 4
+2025-05-05 05:36:24,280 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,280 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,281 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,282 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,282 DEBUG   SenderThread:11873 [sender.py:send():236] send: history
+2025-05-05 05:36:24,282 DEBUG   SenderThread:11873 [sender.py:send():236] send: summary
+2025-05-05 05:36:24,282 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:24,282 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 4
+2025-05-05 05:36:24,285 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-05-05 05:36:24,285 DEBUG   SenderThread:11873 [sender.py:send():236] send: summary
+2025-05-05 05:36:24,294 INFO    SenderThread:11873 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-05-05 05:36:24,294 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:24,294 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 4
+2025-05-05 05:36:24,294 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 5
+2025-05-05 05:36:24,295 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:24,295 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 5
+2025-05-05 05:36:24,295 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:24,296 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 5
+2025-05-05 05:36:24,385 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,442 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 6
+2025-05-05 05:36:24,442 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,442 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:24,442 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 6
+2025-05-05 05:36:24,442 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:24,442 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 6
+2025-05-05 05:36:24,442 INFO    SenderThread:11873 [dir_watcher.py:finish():353] shutting down directory watcher
+2025-05-05 05:36:24,471 INFO    SenderThread:11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/config.yaml
+2025-05-05 05:36:24,471 INFO    SenderThread:11873 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-summary.json
+2025-05-05 05:36:24,472 INFO    SenderThread:11873 [dir_watcher.py:finish():383] scan: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files
+2025-05-05 05:36:24,472 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-metadata.json wandb-metadata.json
+2025-05-05 05:36:24,472 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/requirements.txt requirements.txt
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/config.yaml config.yaml
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/diff.patch diff.patch
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/conda-environment.yaml conda-environment.yaml
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log output.log
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/events.out.tfevents.1746437773.saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM.11797.0 events.out.tfevents.1746437773.saferoboticslab-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM.11797.0
+2025-05-05 05:36:24,473 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-summary.json wandb-summary.json
+2025-05-05 05:36:24,486 INFO    SenderThread:11873 [dir_watcher.py:finish():397] scan save: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py
+2025-05-05 05:36:24,487 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 7
+2025-05-05 05:36:24,490 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:24,490 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 7
+2025-05-05 05:36:24,494 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:24,494 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 7
+2025-05-05 05:36:24,494 INFO    SenderThread:11873 [file_pusher.py:finish():171] shutting down file pusher
+2025-05-05 05:36:24,544 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,545 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,648 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,648 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,751 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,751 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,785 INFO    Thread-18 :11873 [upload_job.py:push():138] Uploaded file /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/config.yaml
+2025-05-05 05:36:24,796 INFO    Thread-17 :11873 [upload_job.py:push():138] Uploaded file /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/requirements.txt
+2025-05-05 05:36:24,811 INFO    Thread-20 :11873 [upload_job.py:push():138] Uploaded file /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/output.log
+2025-05-05 05:36:24,827 INFO    Thread-19 :11873 [upload_job.py:push():138] Uploaded file /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/conda-environment.yaml
+2025-05-05 05:36:24,833 INFO    Thread-21 :11873 [upload_job.py:push():138] Uploaded file /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/files/wandb-summary.json
+2025-05-05 05:36:24,855 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,855 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:24,959 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:24,959 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:25,034 INFO    Thread-6  :11873 [sender.py:transition_state():393] send defer: 8
+2025-05-05 05:36:25,036 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:25,036 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 8
+2025-05-05 05:36:25,036 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:25,037 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 8
+2025-05-05 05:36:25,063 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:25,246 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 9
+2025-05-05 05:36:25,247 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:25,248 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:25,249 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 9
+2025-05-05 05:36:25,249 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:25,249 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 9
+2025-05-05 05:36:25,249 INFO    SenderThread:11873 [sender.py:transition_state():393] send defer: 10
+2025-05-05 05:36:25,251 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: defer
+2025-05-05 05:36:25,251 INFO    HandlerThread:11873 [handler.py:handle_request_defer():163] handle defer: 10
+2025-05-05 05:36:25,251 DEBUG   SenderThread:11873 [sender.py:send():236] send: final
+2025-05-05 05:36:25,251 DEBUG   SenderThread:11873 [sender.py:send():236] send: footer
+2025-05-05 05:36:25,251 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: defer
+2025-05-05 05:36:25,252 INFO    SenderThread:11873 [sender.py:send_request_defer():389] handle sender defer: 10
+2025-05-05 05:36:25,351 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: poll_exit
+2025-05-05 05:36:25,351 DEBUG   SenderThread:11873 [sender.py:send_request():250] send_request: poll_exit
+2025-05-05 05:36:25,352 INFO    SenderThread:11873 [file_pusher.py:join():176] waiting for file pusher
+2025-05-05 05:36:25,600 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: sampled_history
+2025-05-05 05:36:25,603 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: get_summary
+2025-05-05 05:36:25,605 DEBUG   HandlerThread:11873 [handler.py:handle_request():140] handle_request: shutdown
+2025-05-05 05:36:25,606 INFO    HandlerThread:11873 [handler.py:finish():806] shutting down handler
+2025-05-05 05:36:26,252 INFO    WriterThread:11873 [datastore.py:close():279] close: /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_053610-o3q7qbbg/run-o3q7qbbg.wandb
+2025-05-05 05:36:26,497 INFO    SenderThread:11873 [sender.py:finish():1114] shutting down sender
+2025-05-05 05:36:26,498 INFO    SenderThread:11873 [file_pusher.py:finish():171] shutting down file pusher
+2025-05-05 05:36:26,498 INFO    SenderThread:11873 [file_pusher.py:join():176] waiting for file pusher
+2025-05-05 05:36:26,501 INFO    MainThread:11873 [internal.py:handle_exit():80] Internal process exited

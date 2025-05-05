@@ -1,0 +1,177 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.21
+    code_path: code/aerial_gym/rl_training/cleanrl/sac_continuous_action.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.20
+    start_time: 1746437292
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 13
+      - 16
+      - 35
+      4: 3.8.20
+      5: 0.12.21
+      8:
+      - 5
+actor_lr:
+  desc: null
+  value: 0.0003
+actor_update_epochs:
+  desc: null
+  value: 4
+alpha:
+  desc: null
+  value: 0.2
+anneal_lr:
+  desc: null
+  value: false
+batch_size:
+  desc: null
+  value: 4096
+checkpoint:
+  desc: null
+  value: null
+clip_coef:
+  desc: null
+  value: 0.2
+clip_vloss:
+  desc: null
+  value: false
+compute_device_id:
+  desc: null
+  value: 0
+critic_lr:
+  desc: null
+  value: 0.001
+ent_coef:
+  desc: null
+  value: 0.0
+experiment_name:
+  desc: null
+  value: sac_continuous_action
+flex:
+  desc: null
+  value: false
+gamma:
+  desc: null
+  value: 0.99
+graphics_device_id:
+  desc: null
+  value: 0
+headless:
+  desc: null
+  value: false
+horovod:
+  desc: null
+  value: false
+max_grad_norm:
+  desc: null
+  value: 1
+minibatch_size:
+  desc: null
+  value: 2048
+norm_adv:
+  desc: null
+  value: true
+norm_adv_off:
+  desc: null
+  value: false
+num_envs:
+  desc: null
+  value: 128
+num_minibatches:
+  desc: null
+  value: 2
+num_steps:
+  desc: null
+  value: 32
+num_threads:
+  desc: null
+  value: 0
+physics_engine:
+  desc: null
+  value: SimType.SIM_PHYSX
+physx:
+  desc: null
+  value: false
+pipeline:
+  desc: null
+  value: gpu
+play:
+  desc: null
+  value: false
+replay_size:
+  desc: null
+  value: 1000000
+rl_device:
+  desc: null
+  value: cuda:0
+seed:
+  desc: null
+  value: 1
+sim_device:
+  desc: null
+  value: cuda:0
+sim_device_id:
+  desc: null
+  value: 0
+sim_device_type:
+  desc: null
+  value: cuda
+slices:
+  desc: null
+  value: 0
+start_steps:
+  desc: null
+  value: 10000
+subscenes:
+  desc: null
+  value: 0
+target_update_epochs:
+  desc: null
+  value: 50
+task:
+  desc: null
+  value: reach_avoid_task
+tau:
+  desc: null
+  value: 0.005
+torch_deterministic:
+  desc: null
+  value: true
+torch_deterministic_off:
+  desc: null
+  value: false
+total_timesteps:
+  desc: null
+  value: 3000000000
+track:
+  desc: null
+  value: true
+use_gpu:
+  desc: null
+  value: true
+use_gpu_pipeline:
+  desc: null
+  value: true
+vf_coef:
+  desc: null
+  value: 2
+wandb_entity:
+  desc: null
+  value: shrutiroy03-princeton-university
+wandb_project_name:
+  desc: null
+  value: safe-rl

@@ -1,0 +1,1 @@
+{"global_step": 4480, "_timestamp": 1746444299.0339255, "_runtime": 12, "_step": 5, "charts/episodic_return": -139.17388916015625, "charts/episodic_length": 34.0, "charts/learning_rate": 0.0003000000142492354, "losses/actor_loss": -9.709121704101562, "losses/critic_loss": 0.10900317132472992, "charts/SPS": 663.0, "_wandb": {"runtime": 14}}

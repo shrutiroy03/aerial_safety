@@ -1,0 +1,138 @@
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_setup.py:_flush():76] Configure stats pid to 67415
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_setup.py:_flush():76] Loading settings from /home/shruti/.config/wandb/settings
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_setup.py:_flush():76] Loading settings from /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/settings
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'aerial_gym/rl_training/cleanrl/sac_continuous_action.py', 'program': 'sac_continuous_action.py'}
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_init.py:_log_setup():461] Logging user logs to /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_064715-cvsef3n6/logs/debug.log
+2025-05-05 06:47:15,931 INFO    MainThread:67415 [wandb_init.py:_log_setup():462] Logging internal logs to /home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/rl_training/cleanrl/wandb/run-20250505_064715-cvsef3n6/logs/debug-internal.log
+2025-05-05 06:47:15,932 INFO    MainThread:67415 [wandb_init.py:init():495] calling init triggers
+2025-05-05 06:47:15,932 INFO    MainThread:67415 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'sim_device': 'cuda:0', 'pipeline': 'gpu', 'graphics_device_id': 0, 'flex': False, 'physx': False, 'num_threads': 0, 'subscenes': 0, 'slices': 0, 'task': 'reach_avoid_task', 'experiment_name': 'sac_continuous_action', 'checkpoint': None, 'headless': False, 'horovod': False, 'rl_device': 'cuda:0', 'num_envs': 128, 'seed': 1, 'play': False, 'torch_deterministic_off': False, 'track': True, 'wandb_project_name': 'safe-rl', 'wandb_entity': 'shrutiroy03-princeton-university', 'total_timesteps': 3000000000, 'update_epochs': 100, 'actor_lr': 0.0003, 'critic_lr': 0.001, 'num_steps': 32, 'start_steps': 10000, 'anneal_lr': False, 'gamma': 0.99, 'alpha': 0.2, 'tau': 0.005, 'replay_size': 1000000, 'num_minibatches': 2, 'actor_update_epochs': 4, 'target_update_epochs': 50, 'norm_adv_off': False, 'clip_coef': 0.2, 'clip_vloss': False, 'ent_coef': 0.0, 'vf_coef': 2, 'max_grad_norm': 1, 'sim_device_type': 'cuda', 'compute_device_id': 0, 'use_gpu_pipeline': True, 'physics_engine': SimType.SIM_PHYSX, 'use_gpu': True, 'batch_size': 4096, 'minibatch_size': 2048, 'torch_deterministic': True, 'norm_adv': True, 'sim_device_id': 0}
+2025-05-05 06:47:15,932 INFO    MainThread:67415 [wandb_init.py:init():548] starting backend
+2025-05-05 06:47:15,932 INFO    MainThread:67415 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-05 06:47:15,941 INFO    MainThread:67415 [backend.py:ensure_launched():217] starting backend process...
+2025-05-05 06:47:15,948 INFO    MainThread:67415 [backend.py:ensure_launched():222] started backend process with pid: 67491
+2025-05-05 06:47:15,949 INFO    MainThread:67415 [wandb_init.py:init():558] backend started and connected
+2025-05-05 06:47:15,954 INFO    MainThread:67415 [wandb_init.py:init():634] updated telemetry
+2025-05-05 06:47:15,972 INFO    MainThread:67415 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2025-05-05 06:47:16,650 INFO    MainThread:67415 [wandb_run.py:_on_init():1919] communicating current version
+2025-05-05 06:47:16,699 INFO    MainThread:67415 [wandb_run.py:_on_init():1923] got version response upgrade_message: "wandb version 0.19.10 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-05-05 06:47:16,699 INFO    MainThread:67415 [wandb_init.py:init():700] starting run threads in backend
+2025-05-05 06:47:18,490 INFO    MainThread:67415 [wandb_run.py:_console_start():1893] atexit reg
+2025-05-05 06:47:18,491 INFO    MainThread:67415 [wandb_run.py:_redirect():1766] redirect: SettingsConsole.REDIRECT
+2025-05-05 06:47:18,491 INFO    MainThread:67415 [wandb_run.py:_redirect():1771] Redirecting console.
+2025-05-05 06:47:18,492 INFO    MainThread:67415 [wandb_run.py:_redirect():1827] Redirects installed.
+2025-05-05 06:47:18,492 INFO    MainThread:67415 [wandb_init.py:init():732] run started, returning control to user process
+2025-05-05 06:47:18,492 INFO    MainThread:67415 [wandb_run.py:_tensorboard_callback():1239] tensorboard callback: runs/reach_avoid_task__sac_continuous_action__1__1746442035, True
+2025-05-05 07:20:26,779 INFO    MainThread:67415 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 255
+2025-05-05 07:20:26,779 INFO    MainThread:67415 [wandb_run.py:_restore():1834] restore
+2025-05-05 07:20:29,180 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 2
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 345677
+  total_bytes: 345677
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:34,281 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: None
+2025-05-05 07:20:36,092 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 2
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 345677
+  total_bytes: 345677
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,342 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 4
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 345677
+  total_bytes: 352440
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,444 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 53054
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,545 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 508672
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,647 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 509017
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,750 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 509017
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:36,854 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 509017
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:37,187 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 509017
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+
+2025-05-05 07:20:37,422 INFO    MainThread:67415 [wandb_run.py:_on_finish():1991] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 7
+  other_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 509017
+  total_bytes: 509017
+  deduped_bytes: 26548
+}
+local_info {
+}
+
+2025-05-05 07:20:38,527 INFO    MainThread:67415 [wandb_run.py:_footer_history_summary_info():3099] rendering history
+2025-05-05 07:20:38,528 INFO    MainThread:67415 [wandb_run.py:_footer_history_summary_info():3131] rendering summary
+2025-05-05 07:20:38,529 INFO    MainThread:67415 [wandb_run.py:_footer_sync_info():3055] logging synced files

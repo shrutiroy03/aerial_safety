@@ -255,7 +255,7 @@ def get_args():
             "name": "--use_warp",
             "type": lambda x: bool(distutils.util.strtobool(x)),
             "default": "True",
-            "help": "Choose whether to use warp or Isaac Gym rendering pipeline.",
+            "help": "Choose whether to use warp or Isaac Gym rendeing pipeline.",
         },
     ]
 
@@ -319,7 +319,7 @@ if __name__ == "__main__":
 
         wandb.init(
             project=args["wandb_project_name"],
-            entity='shrutiroy03-princeton-university',
+            entity=args["wandb_entity"],
             sync_tensorboard=True,
             config=config,
             monitor_gym=True,

@@ -1,0 +1,127 @@
+using device: cuda:0
+[isaacgym:gymutil.py] Unknown args:  ['--task=reach_avoid_task', '--track', '--wandb-project-name=safe-rl', '--wandb-entity=shrutiroy03-princeton-university']
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+*** Can't create empty tensor
+WARNING: allocation matrix is not full rank. Rank: 4
+[37m[6069 ms][base_task] - INFO : Setting seed: 534730015 (base_task.py:38)
+[37m[6069 ms][reach_avoid_task] - INFO : Building environment for reach-avoid task. (reach_avoid_task.py:44)
+[37m[6069 ms][reach_avoid_task] - INFO : Sim Name: base_sim, Env Name: env_with_obstacles, Robot Name: lmf2, Controller Name: lmf2_velocity_control (reach_avoid_task.py:45)
+[37m[6069 ms][env_manager] - INFO : Populating environments. (env_manager.py:73)
+[37m[6069 ms][env_manager] - INFO : Creating simulation instance. (env_manager.py:87)
+[37m[6069 ms][env_manager] - INFO : Instantiating IGE object. (env_manager.py:88)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Environment (IGE_env_manager.py:41)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Acquiring gym object (IGE_env_manager.py:73)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Acquired gym object (IGE_env_manager.py:75)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Fixing devices (IGE_env_manager.py:89)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Using GPU pipeline for simulation. (IGE_env_manager.py:102)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Sim Device type: cuda, Sim Device ID: 0 (IGE_env_manager.py:105)
+[31m[6070 ms][IsaacGymEnvManager] - CRITICAL : 
+[31m Setting graphics device to -1.
+[31m This is done because the simulation is run in headless mode and no Isaac Gym cameras are used.
+[31m No need to worry. The simulation and warp rendering will work as expected. (IGE_env_manager.py:112)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Graphics Device ID: -1 (IGE_env_manager.py:119)
+[37m[6070 ms][IsaacGymEnvManager] - INFO : Creating Isaac Gym Simulation Object (IGE_env_manager.py:120)
+[33m[6070 ms][IsaacGymEnvManager] - WARNING : If you have set the CUDA_VISIBLE_DEVICES environment variable, please ensure that you set it
+[33mto a particular one that works for your system to use the viewer or Isaac Gym cameras.
+[33mIf you want to run parallel simulations on multiple GPUs with camera sensors,
+[33mplease disable Isaac Gym and use warp (by setting use_warp=True), set the viewer to headless. (IGE_env_manager.py:127)
+[33m[6070 ms][IsaacGymEnvManager] - WARNING : If you see a segfault in the next lines, it is because of the discrepancy between the CUDA device and the graphics device.
+[33mPlease ensure that the CUDA device and the graphics device are the same. (IGE_env_manager.py:132)
+[37m[6792 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Simulation Object (IGE_env_manager.py:136)
+[37m[6795 ms][IsaacGymEnvManager] - INFO : Created Isaac Gym Environment (IGE_env_manager.py:43)
+[37m[6847 ms][env_manager] - INFO : IGE object instantiated. (env_manager.py:109)
+[37m[6847 ms][env_manager] - INFO : Creating warp environment. (env_manager.py:112)
+[37m[6848 ms][env_manager] - INFO : Warp environment created. (env_manager.py:114)
+[37m[6848 ms][env_manager] - INFO : Creating robot manager. (env_manager.py:118)
+[37m[6848 ms][BaseRobot] - INFO : [DONE] Initializing controller (base_robot.py:26)
+[37m[6848 ms][BaseRobot] - INFO : Initializing controller lmf2_velocity_control (base_robot.py:29)
+[33m[6848 ms][base_multirotor] - WARNING : Creating 128 multirotors. (base_multirotor.py:32)
+[37m[6848 ms][env_manager] - INFO : [DONE] Creating robot manager. (env_manager.py:123)
+[37m[6848 ms][env_manager] - INFO : [DONE] Creating simulation instance. (env_manager.py:125)
+[37m[6848 ms][asset_loader] - INFO : Loading asset: model.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6848 ms][asset_loader] - INFO : Loading asset: panel.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6850 ms][asset_loader] - INFO : Loading asset: cuboidal_rod.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6851 ms][asset_loader] - INFO : Loading asset: 1_x_1_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6852 ms][asset_loader] - INFO : Loading asset: left_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6853 ms][asset_loader] - INFO : Loading asset: right_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6854 ms][asset_loader] - INFO : Loading asset: back_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6855 ms][asset_loader] - INFO : Loading asset: front_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6856 ms][asset_loader] - INFO : Loading asset: bottom_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6857 ms][asset_loader] - INFO : Loading asset: top_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6858 ms][asset_loader] - INFO : Loading asset: 0_5_x_0_5_wall.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6859 ms][asset_loader] - INFO : Loading asset: small_cube.urdf for the first time. Next use of this asset will be via the asset buffer. (asset_loader.py:71)
+[37m[6866 ms][env_manager] - INFO : Populating environment 0 (env_manager.py:179)
+[33m[7001 ms][robot_manager] - WARNING : 
+[33mRobot mass: 1.2400000467896461,
+[33mInertia: tensor([[0.0134, 0.0000, 0.0000],
+[33m        [0.0000, 0.0144, 0.0000],
+[33m        [0.0000, 0.0000, 0.0138]], device='cuda:0'),
+[33mRobot COM: tensor([[0., 0., 0., 1.]], device='cuda:0') (robot_manager.py:427)
+[33m[7001 ms][robot_manager] - WARNING : Calculated robot mass and inertia for this robot. This code assumes that your robot is the same across environments. (robot_manager.py:430)
+[31m[7001 ms][robot_manager] - CRITICAL : If your robot differs across environments you need to perform this computation for each different robot here. (robot_manager.py:433)
+[37m[7155 ms][env_manager] - INFO : [DONE] Populating environments. (env_manager.py:75)
+[33m[7169 ms][IsaacGymEnvManager] - WARNING : Headless: True (IGE_env_manager.py:424)
+[37m[7169 ms][IsaacGymEnvManager] - INFO : Headless mode. Viewer not created. (IGE_env_manager.py:434)
+[33m[7304 ms][asset_manager] - WARNING : Number of obstacles to be kept in the environment: 9 (asset_manager.py:32)
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/control/motor_model.py:45: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.min_thrust, device=self.device, dtype=torch.float32).expand(
+/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/control/motor_model.py:48: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(self.max_thrust, device=self.device, dtype=torch.float32).expand(
+[33m[7497 ms][control_allocation] - WARNING : Control allocation does not account for actuator limits. This leads to suboptimal allocation (control_allocation.py:48)
+[37m[7497 ms][WarpSensor] - INFO : Camera sensor initialized (warp_sensor.py:50)
+creating render graph
+Module warp.utils load on device 'cuda:0' took 1.36 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_camera_kernels load on device 'cuda:0' took 7.13 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_stereo_camera_kernels load on device 'cuda:0' took 10.23 ms
+Module aerial_gym.sensors.warp.warp_kernels.warp_lidar_kernels load on device 'cuda:0' took 5.11 ms
+finishing capture of render graph
+num actions:  4
+num obs:  81
+sac_continuous_action.py:571: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  actions[step] = torch.tensor(action, dtype=torch.float32, device=device)
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 574, in <module>
+    next_obs, rewards[step], next_done, info = envs.step(action)
+  File "sac_continuous_action.py", line 288, in step
+    observations, rewards, terminations, truncations, infos = super().step(action)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/gym/core.py", line 280, in step
+    return self.env.step(action)
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 307, in step
+    self.rewards[:], self.safety_margin[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 408, in compute_rewards_and_crashes
+    return compute_reward(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 476, in compute_reward
+    #                                (obs_lmin - torch.amin(image_obs, [1,2])).unsqueeze(1),
+    #                                (wall_lmin - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+    abs_metrics = torch.stack([velocity_max - torch.abs(robot_linvel[:, 0]),
+                  ~~~~~~~~~~~ <--- HERE
+                                velocity_max - torch.abs(robot_linvel[:, 1]),
+                                velocity_max - torch.abs(robot_linvel[:, 2]),
+RuntimeError: stack expects each tensor to be equal size, but got [128] at entry 0 and [128, 240] at entry 8
+Traceback (most recent call last):
+  File "sac_continuous_action.py", line 574, in <module>
+    next_obs, rewards[step], next_done, info = envs.step(action)
+  File "sac_continuous_action.py", line 288, in step
+    observations, rewards, terminations, truncations, infos = super().step(action)
+  File "/home/shruti/miniconda3/envs/safe-rl/lib/python3.8/site-packages/gym/core.py", line 280, in step
+    return self.env.step(action)
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 307, in step
+    self.rewards[:], self.safety_margin[:], self.terminations[:] = self.compute_rewards_and_crashes(self.obs_dict)
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 408, in compute_rewards_and_crashes
+    return compute_reward(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/home/shruti/workspaces/aerial_gym_ws/src/aerial_safety/aerial_gym/task/reach_avoid_task/reach_avoid_task.py", line 476, in compute_reward
+    #                                (obs_lmin - torch.amin(image_obs, [1,2])).unsqueeze(1),
+    #                                (wall_lmin - min_wall_dist).unsqueeze(1)), 1), 1)[0]
+    abs_metrics = torch.stack([velocity_max - torch.abs(robot_linvel[:, 0]),
+                  ~~~~~~~~~~~ <--- HERE
+                                velocity_max - torch.abs(robot_linvel[:, 1]),
+                                velocity_max - torch.abs(robot_linvel[:, 2]),
+RuntimeError: stack expects each tensor to be equal size, but got [128] at entry 0 and [128, 240] at entry 8

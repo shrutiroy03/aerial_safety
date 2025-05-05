@@ -4,12 +4,12 @@ params:
     name: sac #edit algo to sac
 
   model:
-    name: continuous_a2c_logstd
+    name: soft_actor_critic
   
   load_checkpoint: False
 
   network:
-    name: actor_critic
+    name: soft_actor_critic
     separate: False
     space:
       continuous:
@@ -24,7 +24,7 @@ params:
     mlp:
       units: [256,128,64]
       d2rl: False
-      activation: elu
+      activation: relu
       initializer:
         name: default
         scale: 2
